@@ -1,0 +1,30 @@
+clean:
+	echo "Cleaning up Outputs from Module-3, Module-4, Module-6 and Module-9"
+	rm -f ../Data/Output/Module-3/odflows.txt
+	rm -f ../Data/Output/Module-4/lkflows.csv
+	rm -f ../Data/Output/Module-4/tm_per_temoa.csv
+	rm -f ../Data/Output/Module-4/curvature_bins_per_temoa.csv
+	rm -f ../Data/Output/Module-4/grade_bins_per_temoa.csv
+	rm -f ../Data/Output/Module-6/train_for_Mod9.csv
+	rm -f ../Data/Output/Module-6/energy_region_histogram_Hydrogen.csv
+	rm -f ../Data/Output/Module-6/tm_energy_per_charging_station.csv
+	rm -f ../Data/Output/Module-6/energy_for_Mod9.csv
+	rm -f ../Data/Output/Module-6/refueling_for_Mod9.csv
+	rm -f ../Data/Output/Module-6/fleet_size_hrs.csv
+	rm -f ../Data/Output/Module-6/traffic_flow_for_Mod9.csv
+	rm -f ../Data/Output/Module-6/energy_region_histogram_Battery.csv
+	rm -f ../Data/Output/Module-6/tm_energy_per_state.csv
+	rm -f ../Data/Output/Module-6/tm_energy_per_temoa.csv
+	rm -f ../Data/Input/Module-9/energy_for_Mod9.csv
+	rm -f ../Data/Input/Module-9/energy_price_for_Mod9.csv
+	rm -f ../Data/Input/Module-9/refueling_for_Mod9.csv
+	rm -f ../Data/Input/Module-9/traffic_flow_for_Mod9.csv
+	rm -f ../Data/Input/Module-9/train_for_Mod9.csv
+	rm -f Module-4/TrafAssign/luparams.txt
+	rm -f Module-4/TrafAssign/odflows.txt
+	rm -f Module-4/TrafAssign/zones.txt
+	rm -f Module-4/TrafAssign/nodes.txt
+	rm -f Module-4/TrafAssign/lkflow.txt
+	rm -f Module-4/TrafAssign/avgcost.txt
+	rm -f Module-4/TrafAssign/xtime.txt
+
