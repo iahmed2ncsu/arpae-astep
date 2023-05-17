@@ -27,4 +27,9 @@ clean:
 	rm -f Module-4/TrafAssign/lkflow.txt
 	rm -f Module-4/TrafAssign/avgcost.txt
 	rm -f Module-4/TrafAssign/xtime.txt
-
+	rm -rf Module-3/__pycache__
+	rm -rf Module-4/__pycache__
+	rm -rf Module-5/__pycache__
+	rm -rf Module-6/__pycache__
+	rm -rf Module-7/__pycache__
+	rm -rf Module-9/__pycache__
