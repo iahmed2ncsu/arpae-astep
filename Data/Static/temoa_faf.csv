@@ -1,0 +1,133 @@
+FAF_Zone,FAFA_Short_Description,Temoa_zone,Temoa_Description
+20,Alaska,0,Alaska
+151,Honolulu HI,0,Hawaii
+159,Rest of HI,0,Hawaii
+61,Los Angeles CA,1,CA
+62,Sacramento CA,1,CA
+63,San Diego CA,1,CA
+64,San Francisco CA,1,CA
+65,Fresno CA,1,CA
+69,Rest of CA,1,CA
+50,Arkansas,2,CEN
+201,Kansas City MO-KS (KS Part),2,CEN
+202,Wichita KS,2,CEN
+209,Rest of KS,2,CEN
+221,Baton Rouge LA,2,CEN
+222,Lake Charles-Jennings LA,2,CEN
+223,New Orleans LA-MS (LA Part),2,CEN
+229,Rest of LA,2,CEN
+291,Kansas City MO-KS (MO Part),2,CEN
+292,St. Louis MO-IL (MO Part),2,CEN
+299,Rest of MO,2,CEN
+311,Omaha NE-IA (NE Part),2,CEN
+319,Rest of NE,2,CEN
+401,Oklahoma City OK,2,CEN
+402,Tulsa OK,2,CEN
+409,Rest of OK,2,CEN
+460,South Dakota,2,CEN
+101,Philadelphia PA-NJ-DE-MD (DE Part),3,MID_AT
+109,Rest of DE,3,MID_AT
+111,Washington DC-VA-MD-WV (DC Part),3,MID_AT
+241,Baltimore MD,3,MID_AT
+242,Washington DC-VA-MD-WV (MD Part),3,MID_AT
+249,Rest of MD,3,MID_AT
+341,New York NY-NJ-CT-PA (NJ Part),3,MID_AT
+342,Philadelphia PA-NJ-DE-MD (NJ Part),3,MID_AT
+391,Cincinnati OH-KY-IN (OH Part),3,MID_AT
+392,Cleveland OH,3,MID_AT
+393,Columbus OH,3,MID_AT
+394,Dayton OH,3,MID_AT
+399,Rest of OH,3,MID_AT
+421,Philadelphia PA-NJ-DE-MD (PA Part),3,MID_AT
+422,Pittsburgh PA-OH-WV (PA Part),3,MID_AT
+423,New York NY-NJ-CT-PA (PA Part),3,MID_AT
+429,Rest of PA,3,MID_AT
+500,Vermont,3,MID_AT
+511,Richmond VA,3,MID_AT
+512,Virginia Beach-Norfolk VA-NC (VA Part),3,MID_AT
+513,Washington DC-VA-MD-WV (VA Part),3,MID_AT
+519,Rest of VA,3,MID_AT
+540,West Virginia,3,MID_AT
+171,Chicago IL-IN-WI (IL Part),4,N_CEN
+172,St. Louis MO-IL (IL Part),4,N_CEN
+179,Rest of IL,4,N_CEN
+181,Chicago IL-IN-WI (IN Part),4,N_CEN
+182,Indianapolis IN,4,N_CEN
+183,Fort Wayne IN,4,N_CEN
+189,Rest of IN,4,N_CEN
+190,Iowa,4,N_CEN
+261,Detroit MI,4,N_CEN
+262,Grand Rapids MI,4,N_CEN
+269,Rest of MI,4,N_CEN
+380,North Dakota,4,N_CEN
+551,Milwaukee WI,4,N_CEN
+559,Rest of WI,4,N_CEN
+91,Hartford CT,5,NE
+92,New York NY-NJ-CT-PA (CT Part),5,NE
+99,Rest of CT,5,NE
+230,Maine,5,NE
+251,Boston MA-RI-NH-CT (MA Part),5,NE
+259,Rest of MA,5,NE
+271,Minneapolis-St. Paul MN-WI (MN Part),5,NE
+279,Rest of MN,5,NE
+331,Boston MA-RI-NH-CT (NH Part),5,NE
+339,Rest of NH,5,NE
+361,Albany NY  CFS Area,5,NE
+362,Buffalo NY  CFS Area,5,NE
+363,New York NY-NJ-CT-PA (NY Part),5,NE
+364,Rochester NY,5,NE
+369,Rest of NY,5,NE
+441,Boston MA-RI-NH-CT (RI Part),5,NE
+160,Idaho,6,NW
+300,Montana,6,NW
+411,Portland OR-WA (OR Part),6,NW
+419,Rest of OR,6,NW
+531,Seattle WA,6,NW
+532,Portland OR-WA (WA Part),6,NW
+539,Rest of WA,6,NW
+560,Wyoming,6,NW
+11,Birmingham AL,7,SE
+12,Mobile AL,7,SE
+19,Rest of AL,7,SE
+121,Jacksonville FL-GA  CFS Area (FL Part),7,SE
+122,Miami FL,7,SE
+123,Orlando FL,7,SE
+124,Tampa FL,7,SE
+129,Rest of FL,7,SE
+131,Atlanta GA,7,SE
+132,Savannah GA,7,SE
+139,Rest of GA,7,SE
+211,Cincinnati OH-KY-IN (KY Part),7,SE
+212,Louisville KY-IN (KY Part),7,SE
+219,Rest of KY,7,SE
+280,Mississippi,7,SE
+371,Charlotte NC-SC (NC Part),7,SE
+372,Greensboro--Winston-Salem--High Point NC,7,SE
+373,Raleigh-Durham NC,7,SE
+379,Rest of NC,7,SE
+451,Charleston SC,7,SE
+452,Greenville SC,7,SE
+459,Rest of SC,7,SE
+471,Memphis TN-MS-AR (TN Part),7,SE
+472,Nashville TN,7,SE
+473,Knoxville TN,7,SE
+479,Rest of TN,7,SE
+41,Phoenix AZ,8,SW
+42,Tucson AZ,8,SW
+49,Rest of AZ,8,SW
+81,Denver CO,8,SW
+89,Rest of CO,8,SW
+321,Las Vegas NV-AZ (NV Part),8,SW
+329,Rest of NV,8,SW
+350,New Mexico,8,SW
+491,Salt Lake City UT,8,SW
+499,Rest of UT,8,SW
+481,Austin TX,9,TX
+482,Beaumont TX,9,TX
+483,Corpus Christi TX,9,TX
+484,Dallas-Fort Worth TX-OK (TX Part),9,TX
+485,El Paso TX-NM (TX Part),9,TX
+486,Houston TX,9,TX
+487,Laredo TX,9,TX
+488,San Antonio TX,9,TX
+489,Rest of TX,9,TX

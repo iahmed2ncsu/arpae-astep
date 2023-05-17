@@ -1,5 +1,6 @@
 clean:
 	echo "Cleaning up Outputs from Module-3, Module-4, Module-6 and Module-9"
+	rm -f ../Data/Config/user_input.json
 	rm -f ../Data/Output/Module-3/odflows.txt
 	rm -f ../Data/Output/Module-4/lkflows.csv
 	rm -f ../Data/Output/Module-4/tm_per_temoa.csv

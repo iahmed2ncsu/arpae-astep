@@ -1,0 +1,14 @@
+Region (1-9)	Tech (1-6)	TrainLen (1-3)	Detail (Y/N)
+1	1	3	0
+
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
