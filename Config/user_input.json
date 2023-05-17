@@ -1,0 +1,60 @@
+{
+	"energy_system_scenario": "Reference/business as usual",
+	"freight_demand_scenario": "Population Shift",
+	"year": "2025",
+	"econ_scn": "Low (pessimistic)",
+	"analy_yr": 2025,
+	"prcnt": 0.018,
+	"prcnt_ffc": 0.0,
+	"prcnt_ffp": 0.0,
+	"tech_fraction": {
+		"2025": {
+			"Diesel": 0.5,
+			"Bat": 0.3,
+			"HydHyb": 0.2,
+			"DieHyb": 0.0,
+			"BioDie": 0.0,
+			"BioHyb": 0.0
+		},
+		"2030": {
+			"Diesel": 0.4,
+			"Bat": 0.4,
+			"HydHyb": 0.2,
+			"DieHyb": 0.0,
+			"BioDie": 0.0,
+			"BioHyb": 0.0
+		},
+		"2035": {
+			"Diesel": 0.3,
+			"Bat": 0.4,
+			"HydHyb": 0.2,
+			"DieHyb": 0.1,
+			"BioDie": 0.0,
+			"BioHyb": 0.0
+		},
+		"2040": {
+			"Diesel": 0.1,
+			"Bat": 0.4,
+			"HydHyb": 0.2,
+			"DieHyb": 0.1,
+			"BioDie": 0.1,
+			"BioHyb": 0.1
+		},
+		"2045": {
+			"Diesel": 0.1,
+			"Bat": 0.4,
+			"HydHyb": 0.2,
+			"DieHyb": 0.1,
+			"BioDie": 0.1,
+			"BioHyb": 0.1
+		},
+		"2050": {
+			"Diesel": 0.0,
+			"Bat": 0.4,
+			"HydHyb": 0.4,
+			"DieHyb": 0.0,
+			"BioDie": 0.0,
+			"BioHyb": 0.2
+		}
+	}
+}
