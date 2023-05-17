@@ -324,7 +324,7 @@ with tab3:
             ### Module 7
             ############
             st.write("Running Module 7")
-            energy_prices(energy_system_scenario_options, renewable_prices, h2_sub,oil_prices)
+            energy_prices(energy_system_scenario_options.get(st.session_state.energy_system_scenario), renewable_prices, h2_sub,oil_prices)
 
             ############
             ### Module 9
