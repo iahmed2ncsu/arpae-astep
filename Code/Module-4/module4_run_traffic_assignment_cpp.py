@@ -75,7 +75,6 @@ def run_traffic_assignment(year):
 #             os.remove(file)
     subprocess.run([file_trafassign], capture_output=True)
     os.chdir(working_dir)
-
     ### Get TrafAssign output files and convert to .csv, delimiter ","
     ### Only carried out for lkflows, remaining files not required
 
