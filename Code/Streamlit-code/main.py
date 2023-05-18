@@ -23,7 +23,7 @@ from numpy import genfromtxt
 ### IMPORT MODULES
 ##################
 
-for module in ["../Module-3", "../Module-4", "../Module-5", "../Module-6", "../Module-7", "../Module-9"]:
+for module in ["./Code/Module-3", "./Code/Module-4", "./Code/Module-5", "./Code/Module-6", "./Code/Module-7", "./Code/Module-9"]:
     sys.path.append("%s/" %module)
 
 st.write(os.getcwd())
