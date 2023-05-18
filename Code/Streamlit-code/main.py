@@ -23,9 +23,10 @@ from numpy import genfromtxt
 ### IMPORT MODULES
 ##################
 
-for module in ["Module-3", "Module-4", "Module-5", "Module-6", "Module-7", "Module-9"]:
+for module in ["../Module-3", "../Module-4", "../Module-5", "../Module-6", "../Module-7", "../Module-9"]:
     sys.path.append("%s/" %module)
 
+st.write(os.getcwd())
 import module3_freight_demand
 from module3_freight_demand import *
 import module4_run_traffic_assignment_cpp
