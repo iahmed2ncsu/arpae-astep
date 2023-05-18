@@ -65,7 +65,9 @@ def run_traffic_assignment(year):
     
     ### Run TrafAssign.exe C++ code to assign net ton flows by link and direction
     working_dir = os.getcwd()
+    st.write(os.getcwd())
     os.chdir(path_trafassign)
+    st.write(os.getcwd())
 #     files_to_be_removed = ["nodes.txt", "zones.txt", "lkflow.txt", "xtime.txt"]
 #     st.write("Module4: Removing files %s from the TrafAssign folder" %files_to_be_removed)
 #     for file in files_to_be_removed:
