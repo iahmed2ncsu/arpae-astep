@@ -27,7 +27,7 @@ import time
 import json
 #import numpy as np
 import pandas as pd
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
@@ -99,12 +99,12 @@ def fit_linear_regression(x_col, y_col, print_modell_coef=False, plot=False):
         print("Intercept: {}".format(reg_model.intercept_))
         print("R2_score: {}".format(round(r2_score(y, y_pred), 3)))
 
-    if plot:
-        plt.plot(X, y, c="b", label="Original values")
-        plt.plot(X, y_pred, c="g", label="Linear Regression fit")
-        plt.text(0.8*max(X), min(y), "R2_score: {}".format(round(r2_score(y, y_pred), 3)))
-        plt.legend()
-        plt.show()
+#     if plot:
+#         plt.plot(X, y, c="b", label="Original values")
+#         plt.plot(X, y_pred, c="g", label="Linear Regression fit")
+#         plt.text(0.8*max(X), min(y), "R2_score: {}".format(round(r2_score(y, y_pred), 3)))
+#         plt.legend()
+#         plt.show()
 
     return reg_model
 
