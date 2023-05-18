@@ -52,7 +52,7 @@ def run_traffic_assignment(year):
             years -> Analysis years (numeric)
     
         Output:
-            lkflow -> output of TrafAssign.exe
+            lkflow -> output of TrafAssign.exe, which is tonnes by link and direction
             lkflows -> tonnes to tonne-miles
             tm_per_temoa -> tonne-miles per Temoa region
             grade_per_temoa, curvature_per_temoa -> Further Outputs

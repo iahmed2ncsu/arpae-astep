@@ -85,8 +85,23 @@ def fix_tech_nomenclature(data):
 
 def calculate_energy_use(year):
     """
+    This function converts traffic (tonne-miles) into energy.
+    
+        Input:
+            tech_fraction -> Energy distribution acquired from the 
+                                   config file (user-input)
+            P_nc = [0.3, 0.6, 0.1] -> Train distribution for STS. 
+                                 For MTS, this should be [1] 
+                                 (to-be-implemented)
+                                 
+    The first part of this function converts tonne-miles from links
+    to yards using vectorization (the logic was derived from a VBA code).
+    The second part converts tonne-miles into energy. The main output is 
+    tonne-miles and energy per yard (charging station), state and 
+    temoa region.
+    
     The output from some modules use a different nomenclature
-    for the categorical variable, "techonology". This template
+    for the categorical variable, "technology". This template
     fixes that.
     """
 
