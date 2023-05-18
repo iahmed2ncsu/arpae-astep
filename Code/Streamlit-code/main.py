@@ -42,6 +42,11 @@ from module9_prepare_inputs import *
 import module9_prepare_outputs
 from module9_prepare_outputs import *
 
+### Set Page Config
+st.set_page_config(page_title=None, page_icon=None, 
+                   layout="wide", 
+                   initial_sidebar_state="auto", menu_items=None)
+st.write(os.getcwd())
 ###################
 ### Paths and Files
 ###################
@@ -71,11 +76,6 @@ tolerance = 1e-05
 ####################
 ### STREAMLIT BEGINS
 ####################
-
-### Set Page Config
-st.set_page_config(page_title=None, page_icon=None, 
-                   layout="wide", 
-                   initial_sidebar_state="auto", menu_items=None)
 
 ### Define Tab Names and Numbers
 tab1, tab2,tab3, tab4 = st.tabs(["Inputs 1-3", "Inputs 4-7","Run Economic Assessment","Results"])
