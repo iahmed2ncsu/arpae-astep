@@ -35,12 +35,12 @@ import base64
 ### Input/Output and Static files in repository
 #################################
 
-config_input_path = "../Config/user_input.json"
-static_input_path = "../Data/Static/"
-template_input_path = "../Data/Template/"
+config_input_path = "./Config/user_input.json"
+static_input_path = "./Data/Static/"
+template_input_path = "./Data/Template/"
 
-module9_input_path = "../Data/Input/Module-9"
-module9_output_path = "../Data/Output/Module-9"
+module9_input_path = "./Data/Input/Module-9"
+module9_output_path = "./Data/Output/Module-9"
 
 def module9_economic_assessment():
     

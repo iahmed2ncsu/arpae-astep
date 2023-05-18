@@ -36,15 +36,15 @@ from sklearn.metrics import r2_score
 ### Input/Output and Static files in repository
 #################################
 
-config_input_path = "../Config/user_input.json"
-static_input_path = "../Data/Static/"
-template_input_path = "../Data/Template/"
+config_input_path = "./Config/user_input.json"
+static_input_path = "./Data/Static/"
+template_input_path = "./Data/Template/"
 
-module6_output_path = "../Data/Output/Module-6"
-module7_output_path = "../Data/Output/Module-7"
-module8_output_path = "../Data/Output/Module-8"
+module6_output_path = "./Data/Output/Module-6"
+module7_output_path = "./Data/Output/Module-7"
+module8_output_path = "./Data/Output/Module-8"
 
-module9_input_path = "../Data/Input/Module-9"
+module9_input_path = "./Data/Input/Module-9"
 
 
 ###################

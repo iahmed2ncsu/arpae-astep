@@ -16,11 +16,11 @@ import streamlit as st
 ###################
 
 # SingleTrainSimulator
-path_sts = "../Code/Module-5/SingleTrainSimulator-1/bin/Debug/net6.0/"
+path_sts = "./Code/Module-5/SingleTrainSimulator-1/bin/Debug/net6.0/"
 file_sts = "SingleTrainSimulator-1.exe"
 
-module5_inputdata_path = "../Data/Input/Module-5"
-module5_outputdata_path = "../Data/Output/Module-5" 
+module5_inputdata_path = "./Data/Input/Module-5"
+module5_outputdata_path = "./Data/Output/Module-5" 
 
 #############
 ### Functions

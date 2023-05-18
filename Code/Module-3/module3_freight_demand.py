@@ -19,13 +19,12 @@ import streamlit as st
 ### Paths and Files
 ###################
 
-static_input_path = "../Data/Static/"
-module3_output_path = "../Data/Output/Module-3"
+static_input_path = "./Data/Static/"
+module3_output_path = "./Data/Output/Module-3"
 
 # TrafAssign
-path_trafassign = "./Module-4/TrafAssign/"
+path_trafassign = "./Code/Module-4/TrafAssign/"
 
-st.write(os.getcwd())
 net_zones = pd.read_csv("%s/net_zones.csv" %static_input_path)  
 
 #############

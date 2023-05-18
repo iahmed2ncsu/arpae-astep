@@ -14,12 +14,12 @@ import pandas as pd
 ### Paths and Files
 ###################
 
-static_input_path = "../Data/Static"
-config_input_path = "../Config/"
+static_input_path = "./Data/Static"
+config_input_path = "./Config/"
 
-module4_output_path = "../Data/Output/Module-4"
-module5_output_path = "../Data/Output/Module-5"
-module6_output_path = "../Data/Output/Module-6"
+module4_output_path = "./Data/Output/Module-4"
+module5_output_path = "./Data/Output/Module-5"
+module6_output_path = "./Data/Output/Module-6"
 
 
 ########################################

@@ -2,8 +2,8 @@ import pandas as pd
 ### Paths and Files
 ###################
 ### read the combined commodity and carbon-intensity price data sent by Adi    
-static_input_path = "../Data/Static"    
-module7_output_path = "../Data/Output/Module-7"
+static_input_path = "./Data/Static"    
+module7_output_path = "./Data/Output/Module-7"
 
 input_mod7 = pd.read_csv("%s/commodityPrice_and_carbonIntensity_module7.csv" %(module7_output_path)) 
 
