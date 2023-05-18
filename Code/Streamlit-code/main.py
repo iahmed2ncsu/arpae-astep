@@ -26,7 +26,7 @@ from numpy import genfromtxt
 for module in ["./Code/Module-3", "./Code/Module-4", "./Code/Module-5", "./Code/Module-6", "./Code/Module-7", "./Code/Module-9"]:
     sys.path.append("%s/" %module)
 
-#st.write(os.getcwd())
+st.write(os.getcwd())
 import module3_freight_demand
 from module3_freight_demand import *
 import module4_run_traffic_assignment_cpp
