@@ -54,7 +54,7 @@ file_config_output = "%s/user_input.json" %(path_config)
 
 ### Relative Path where the Luparam Needs to be Written.
 #path_trafassign = "./Module-4/TrafAssign/out/build/x64-debug"
-path_trafassign = "./Module-4/TrafAssign/"
+path_trafassign = "./Code/Module-4/TrafAssign/"
 file_luparams = "%s/luparams.txt" %path_trafassign
 
 ### Read Hard-Coded Input
