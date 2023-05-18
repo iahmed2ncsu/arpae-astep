@@ -139,6 +139,7 @@ def create_energy_intensity_matrix_sts(option="default"):
         df_result.to_csv("%s/EnergyIntensity_Matrix.csv " %(module5_outputdata_path), index=False)
 
     elif option=="custom":
+        
         uploaded_alignment_data = st.file_uploader("Enter Alignment Data \n Please copy and paste the following as the header and provide columns that adhere to it: \nDist(mi)        SpdLim(mph)     Grade(%)        Curve(Doc)      Catenary(Y/N)")
         df_alignment = pd.read_csv(uploaded_alignment_data)
         df_alignment.to_csv("%s/AlignmentData.txt" %(path_sts))
