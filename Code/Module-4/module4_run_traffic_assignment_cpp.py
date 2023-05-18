@@ -45,10 +45,17 @@ path_lkflows = "%s/%s" %(path_trafassign, file_lkflows)
 #############
 
 def run_traffic_assignment(year):
-    """Create lkflow, lkflows and tm_per_temoa.
+    """
+    Create lkflow, lkflows and tm_per_temoa.
     
     Keyword arguments:
-    years -- Analysis years (numeric)
+    years -> Analysis years (numeric)
+    
+    Output:
+    lkflow -> output of TrafAssign.exe
+    lkflows -> tonnes to tonne-miles
+    tm_per_temoa -> tonne-miles per Temoa region
+    grade_per_temoa, curvature_per_temoa -> Further Outputs
     """
     start = time.time()
 
@@ -146,4 +153,4 @@ def run_traffic_assignment(year):
     end = time.time()
     print(f"Run time for Module_4 = {round(end-start,ndigits = 2)} seconds")
     
-    return(lkflows)
+    return()

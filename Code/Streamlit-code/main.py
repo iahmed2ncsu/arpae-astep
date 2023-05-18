@@ -302,7 +302,7 @@ with tab3:
             ############
     
             st.write("Running Module 4: Traffic Assignment")
-            lkflows = module4_run_traffic_assignment_cpp.run_traffic_assignment(year)
+            module4_run_traffic_assignment_cpp.run_traffic_assignment(year)
     
             ############
             ### Module 5
