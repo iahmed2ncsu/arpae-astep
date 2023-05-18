@@ -46,8 +46,8 @@ from module9_prepare_outputs import *
 ### Paths and Files
 ###################
 
-path_config = "../Config/"
-static_input_path = "../Data/Static/"
+path_config = "./Config/"
+static_input_path = "./Data/Static/"
 
 ### Config File
 file_config_output = "%s/user_input.json" %(path_config)
