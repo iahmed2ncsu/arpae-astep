@@ -54,6 +54,11 @@ module9_input_path = "../Data/Input/Module-9"
 ### Nomenclature
 
 def replace_template_nomenclature(data):
+    """    
+    The output from some modules use a different nomenclature
+    for the categorical variable, "technology". This template
+    fixes that.
+    """
     template_regions = {'CA': 'california',
                         'CEN': 'central',
                         'MID_AT': 'middle_atlantic',
@@ -78,6 +83,9 @@ def replace_template_nomenclature(data):
 ### Fit linear regression from recharging station size to energy refueled and cost
 
 def fit_linear_regression(x_col, y_col, print_modell_coef=False, plot=False):
+    """    
+    The function performs linear regression given X and Y.
+    """
     X = x_col.values.reshape(-1, 1)
     y = y_col.values.reshape(-1, 1)
 
@@ -106,6 +114,9 @@ def fit_linear_regression(x_col, y_col, print_modell_coef=False, plot=False):
 def update_module9_templates(year, mod6_data, mod9_data, user_input,
                              sort_cols=["energy_system_scenario", "freight_demand_scenario",
                                         "year", "region", "technology"]):
+    """    
+    The function updates the templates stored in Data/Static for Module 9.
+    """    
     # Sort both tables to make sure order matches
     mod9_data = mod9_data.sort_values(by=sort_cols).reset_index(drop=True)
     mod6_data = mod6_data.sort_values(by=sort_cols).reset_index(drop=True)
@@ -128,6 +139,10 @@ def update_module9_templates(year, mod6_data, mod9_data, user_input,
 def update_module7_templates(year, mod6_data, mod9_data, user_input, 
                              sort_cols=["energy_system_scenario", "freight_demand_scenario",
                                         "year", "region", "technology"]):
+    """    
+    The function updates the templates stored in Data/Template in conjunction
+    with results from Module 7 for Module 9.
+    """ 
     # Sort both tables to make sure order matches
     mod9_data = mod9_data.sort_values(by=sort_cols).reset_index(drop=True)
     mod6_data = mod6_data.sort_values(by=sort_cols).reset_index(drop=True)
@@ -155,6 +170,10 @@ def update_module7_templates(year, mod6_data, mod9_data, user_input,
 def update_module8_templates(year, mod8_data, mod9_data, user_input,
                              sort_cols=["energy_system_scenario", "freight_demand_scenario",
                                         "year", "region", "technology"]):
+    """    
+    The function updates the templates stored in Data/Template in conjunction
+    with results from Module 8 for Module 9.
+    """ 
     # Sort both tables to make sure order matches
     mod9_data = mod9_data.sort_values(by=sort_cols).reset_index(drop=True)
     mod8_data = mod8_data.sort_values(by=sort_cols).reset_index(drop=True)
@@ -173,7 +192,12 @@ def update_module8_templates(year, mod8_data, mod9_data, user_input,
 
 
 def prepare_inputs_for_module9(year, save_mode="append", print_summary=False):
-
+    """    
+    The function prepares the five inputs files needed for Module 9.
+    
+        Input: files from Module-6, Module-7 and Module-8 along with template
+               files in Data/Template 
+    """ 
     start = time.time()
 
     ################################
