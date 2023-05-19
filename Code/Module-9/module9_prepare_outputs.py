@@ -42,7 +42,7 @@ template_input_path = "./Data/Template/"
 module9_input_path = "./Data/Input/Module-9"
 module9_output_path = "./Data/Output/Module-9"
 
-def module9_economic_assessment():
+def module9_economic_assessment(i,J,c):
     
     df1 = pd.read_csv("%s/traffic_flow_for_Mod9.csv" %module9_input_path)
     df2 = pd.read_csv("%s/train_for_Mod9.csv" %module9_input_path)
@@ -50,15 +50,15 @@ def module9_economic_assessment():
     df4 = pd.read_csv("%s/energy_for_Mod9.csv" %module9_input_path)
     df5 = pd.read_csv("%s/energy_price_for_Mod9.csv" %module9_input_path)
     
-    df_parameter = pd.read_csv("%s/parameters.csv" %template_input_path)
+    #df_parameter = pd.read_csv("%s/parameters.csv" %template_input_path)
     
     dfs = [df1, df2, df3, df4, df5]
     df_final = reduce(lambda left, right: pd.merge(left, right, on=['technology', 'region', 'energy_system_scenario',
                                                                     'freight_demand_scenario', 'year']), dfs)
-    np_parameter = np.array(df_parameter)
-    i = np_parameter[0, 1]  # annual discount rate (percentage point)
-    J = np_parameter[1, 1]  # technology lifetime (year)
-    c = np_parameter[2, 1]  # contingency factor (%)
+    #np_parameter = np.array(df_parameter)
+    # i = np_parameter[0, 1]  # annual discount rate (percentage point)
+    # J = np_parameter[1, 1]  # technology lifetime (year)
+    # c = np_parameter[2, 1]  # contingency factor (%)
 
     for n in df_final.index:
         LN = df_final.loc[n, 'number_of_locomotives']  # network-level number of locomotive
