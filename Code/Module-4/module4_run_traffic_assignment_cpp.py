@@ -24,7 +24,7 @@ module4_output_path = "./Data/Output/Module-4"
 # TrafAssign
 #path_trafassign = "./Module-4/TrafAssign/out/build/x64-debug"
 path_trafassign = "./Code/Module-4/TrafAssign/"
-file_trafassign = "TrafAssign"
+file_trafassign = "TrafAssign.exe"
 
 # Links data path
 static_input_path = "./Data/Static"
@@ -39,7 +39,7 @@ path_lkflows = "%s/%s" %(path_trafassign, file_lkflows)
 
 # file_lkflows = "lkflow_TA_PopShift_2020-v7-Mod4b.txt"
 # path_lkflows = "%s/%s" %(static_input_path, file_lkflows)
-
+#path = /app/arpae-astep
 #############
 ### Functions
 #############
@@ -73,7 +73,7 @@ def run_traffic_assignment(year):
 #     for file in files_to_be_removed:
 #         if os.path.exists(file):
 #             os.remove(file)
-    subprocess.run([file_trafassign], capture_output=True)
+    subprocess.run(file_trafassign, capture_output=True)
     os.chdir(working_dir)
     ### Get TrafAssign output files and convert to .csv, delimiter ","
     ### Only carried out for lkflows, remaining files not required
