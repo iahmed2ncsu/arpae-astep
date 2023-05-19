@@ -24,7 +24,7 @@ module4_output_path = "./Data/Output/Module-4"
 # TrafAssign
 #path_trafassign = "./Module-4/TrafAssign/out/build/x64-debug"
 path_trafassign = "./Code/Module-4/TrafAssign/"
-file_trafassign = "TrafAssign.exe"
+file_trafassign = "TrafAssign"
 
 # Links data path
 static_input_path = "./Data/Static"
