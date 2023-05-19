@@ -10,6 +10,7 @@ Created April 2023
 ####################
 
 import os
+import time
 import sys
 import streamlit as st
 import json
@@ -263,18 +264,18 @@ with tab2:
     ###################
     st.markdown('## 9. Inputs for Cost Analysis')
     #st.write("Annual discount rate (percentage point)")
-    if 'discount_rate_mod9' not in st.session_state:
-         st.session_state.discount_rate_mod9 = None
+    if 'discount_rate' not in st.session_state:
+         st.session_state.discount_rate = None
     if 'tech_lifetime' not in st.session_state:
           st.session_state.tech_lifetime = None
     if 'contingency_factor' not in st.session_state:
           st.session_state.contingency_factor = None
-    discount_rate_mod9 = st.slider(label = "Annual discount rate (percentage point)",min_value = 0.02, max_value = 0.1, value = 0.1)
+    discount_rate = st.slider(label = "Annual discount rate (percentage point)",min_value = 0.02, max_value = 0.1, value = 0.1)
     tech_lifetime = st.slider(label = "Technology lifetime (year)",min_value = 10, max_value = 30, value = 30)
     contingency_factor = st.slider(label = "Contingency factor (%)",min_value = 5, max_value = 50, value = 20)
 
     if st.button("Submit Selections", key = 901):
-        st.session_state.discount_rate_mod9 = discount_rate_mod9
+        st.session_state.discount_rate = discount_rate
         st.session_state.tech_lifetime = tech_lifetime
         st.session_state.contingency_factor = contingency_factor
 
@@ -355,7 +356,7 @@ with tab3:
             module9_prepare_inputs.prepare_inputs_for_module9(str(year), save_mode="overwrite", print_summary=True)
                 
             st.write("Preparing Output Files for Module 9")
-            module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate_mod9, 
+            module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate, 
                                                                 st.session_state.tech_lifetime,st.session_state.contingency_factor)
             
             st.write("All Modules Finished")

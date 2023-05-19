@@ -42,7 +42,7 @@ template_input_path = "./Data/Template/"
 module9_input_path = "./Data/Input/Module-9"
 module9_output_path = "./Data/Output/Module-9"
 
-def module9_economic_assessment(i,J,c):
+def module9_economic_assessment(discount_rate,tech_lifetime,c):
     
     df1 = pd.read_csv("%s/traffic_flow_for_Mod9.csv" %module9_input_path)
     df2 = pd.read_csv("%s/train_for_Mod9.csv" %module9_input_path)
@@ -77,13 +77,13 @@ def module9_economic_assessment(i,J,c):
         OMI = df_final.loc[
             n, 'infrastructure_O&M_cost ($/year)']  # infrastructure operation & maintenance cost ($/year)
         TMT = df_final.loc[n, 'freight_ton_mile_travel']  # freignt ton-mile travel (ton-mile/year)
-        LTC = (LN * LC + TN * TC + LH * LHC * J + TH * THC * J) / (1 + i) ** J / (
-                (TMT * J) / (1 + i) ** J) * 100  # estimate levelized train cost (¢/ton-mile)
+        LTC = (LN * LC + TN * TC + LH * LHC * tech_lifetime + TH * THC * tech_lifetime) / (1 + discount_rate) ** tech_lifetime / (
+                (TMT * tech_lifetime) / (1 + discount_rate) ** tech_lifetime) * 100  # estimate levelized train cost (¢/ton-mile)
         df_final.loc[n, 'levelized_train_cost (cents/ton-mile)'] = LTC
-        LFC = FP * FU * J / (1 + i) ** J / ((TMT * J) / (1 + i) ** J) * 100  # estimate levelized fuel cost (¢/ton-mile)
+        LFC = FP * FU * tech_lifetime / (1 + discount_rate) ** tech_lifetime / ((TMT * tech_lifetime) / (1 + discount_rate) ** tech_lifetime) * 100  # estimate levelized fuel cost (¢/ton-mile)
         df_final.loc[n, 'levelized_fuel_cost (cents/ton-mile)'] = LFC
-        LIC = (RN * RSC + OMI * J) / (1 + i) ** J / (
-                (TMT * J) / (1 + i) ** J) * 100  # estimate levelized infrastructure cost (¢/ton-mile)
+        LIC = (RN * RSC + OMI * tech_lifetime) / (1 + discount_rate) ** tech_lifetime / (
+                (TMT * tech_lifetime) / (1 + discount_rate) ** tech_lifetime) * 100  # estimate levelized infrastructure cost (¢/ton-mile)
         df_final.loc[n, 'levelized_infrastructure_cost (cents/ton-mile)'] = LIC
         LCC = (LTC + LFC + LIC) * c / 100  # estimate levelized contingency cost (¢/ton-mile)
         df_final.loc[n, 'levelized_contingency_cost (cents/ton-mile)'] = LCC
@@ -97,11 +97,11 @@ def module9_economic_assessment(i,J,c):
             n, 'upstream_CH4_emission_factor']  # upstream CH4 emission factor (kgCH4/gallon, kgCH4/kg-H2, or kgCH4/kWh-e)
         CH4D = df_final.loc[
             n, 'downstream_CH4_emission_factor']  # downstream CH4 emission factor (kgCH4/gallon, kgCH4/kg-H2, or kgCH4/kWh-e)
-        LCO2 = 1000 * (CO2U + CO2D) * FU * J / (1 + i) ** J / (
-                (TMT * J) / (1 + i) ** J)  # estimate levelized CO2 carbon intensity (gCO2/ton-mile)
+        LCO2 = 1000 * (CO2U + CO2D) * FU * tech_lifetime / (1 + discount_rate) ** tech_lifetime / (
+                (TMT * tech_lifetime) / (1 + discount_rate) ** tech_lifetime)  # estimate levelized CO2 carbon intensity (gCO2/ton-mile)
         df_final.loc[n, 'CO2_carbon_intensity (g CO2/ton-mile)'] = LCO2
-        LCH4 = 1000 * (CH4U + CH4D) * FU * J / (1 + i) ** J / (
-                (TMT * J) / (1 + i) ** J)  # estimate levelized CH4 carbon intensity (gCH4/ton-mile)
+        LCH4 = 1000 * (CH4U + CH4D) * FU * tech_lifetime / (1 + discount_rate) ** tech_lifetime / (
+                (TMT * tech_lifetime) / (1 + discount_rate) ** tech_lifetime)  # estimate levelized CH4 carbon intensity (gCH4/ton-mile)
         df_final.loc[n, 'CH4_carbon_intensity (g CH4/ton-mile)'] = LCH4
         if df_final.loc[n, 'technology'] == 'biodiesel':
             LCO2eq = LCO2 + 27.0 * LCH4  # estimate levelized CO2-equivalent carbon intensity based on GWP-100 for CH4-non fossil from IPCC AR6
