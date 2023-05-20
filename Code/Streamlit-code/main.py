@@ -320,14 +320,16 @@ with tab3:
             net_flows = module3_freight_demand.create_total_flow(year, freight_demand_scenario, econ_scn, ff_red, 0.0175)
             end = time.time()
             st.write(f"Module 3 Runtime = {int(end-start)}")
-            # ############
-            # ### Module 4
-            # ############
-            # start = time.time()
-            # st.write("Running Module 4: Traffic Assignment")
-            # module4_run_traffic_assignment_cpp.run_traffic_assignment(year)
-            # end = time.time()
-            # st.write(f"Module 4 Runtime = {int(end-start)}")
+            
+            ############
+            ### Module 4
+            ############
+            start = time.time()
+            st.write("Running Module 4: Traffic Assignment")
+            module4_run_traffic_assignment_cpp.run_traffic_assignment(year)
+            end = time.time()
+            st.write(f"Module 4 Runtime = {int(end-start)}")
+            
             # ############
             # ### Module 5
             # ############
@@ -339,6 +341,7 @@ with tab3:
             # module5_single_train_simulator.create_energy_intensity_matrix_sts(option=module5_energyintensity_option)
             # end = time.time()
             # st.write(f"Module 5 Runtime = {int(end-start)}")
+            
             # ############
             # ### Module 6
             # ############
@@ -347,6 +350,7 @@ with tab3:
             # module6_calculate_energy_use.calculate_energy_use(str(year))  
             # end = time.time()
             # st.write(f"Module 6 Runtime = {int(end-start)}")
+            
             # ############
             # ### Module 7
             # ############
@@ -355,6 +359,7 @@ with tab3:
             # energy_prices(energy_system_scenario_options.get(st.session_state.energy_system_scenario), renewable_prices, h2_sub,oil_prices)
             # end = time.time()
             # st.write(f"Module 7 Runtime = {int(end-start)}")
+            
             # ############
             # ### Module 9
             # ############
