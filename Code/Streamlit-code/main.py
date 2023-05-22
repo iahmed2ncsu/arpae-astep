@@ -284,9 +284,9 @@ with tab2:
 ###########################
 
 with tab3:
-    st.markdown('## Run Module')
+    st.markdown('## Press the Run button to run the Economic Assessment Tool')
 
-    if st.button("Submit All Inputs"):
+    if st.button("▶️Run"):
         config_input ={"energy_system_scenario": energy_system_scenario_options.get(st.session_state.energy_system_scenario), 
                          "freight_demand_scenario": st.session_state.freight_demand_scenario, 
                          "year": "2025", 
