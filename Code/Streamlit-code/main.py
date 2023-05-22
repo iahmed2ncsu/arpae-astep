@@ -319,7 +319,7 @@ with tab3:
             st.write("Running Module 3: Freight Demand Scenarios")
             net_flows = module3_freight_demand.create_total_flow(year, freight_demand_scenario, econ_scn, ff_red, 0.0175)
             end = time.time()
-            st.write(f"Module 3 Runtime = {int(end-start)}")
+            st.write(f"Module 3 Runtime = {int(end-start)} seconds")
             
             ############
             ### Module 4
