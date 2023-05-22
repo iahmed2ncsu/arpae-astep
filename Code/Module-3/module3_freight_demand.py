@@ -593,8 +593,11 @@ def create_total_flow(years, freight_demand_scenario, econ_scn, fossilfuel_reduc
                 total_flow = total_flow + flow
     
     net_flows = generate_net_flows(total_flow)
-    net_flows.to_csv("%s/odflows.txt" %(module3_output_path), sep="\t", header=None, index=False)
-    net_flows.to_csv("%s/odflows.txt" %(path_trafassign), sep="\t", header=None, index=False)
+    with open ("%s/odflows.txt" %(module3_output_path),"w") as output:
+        output.write(net_flows)
+    
+    #net_flows.to_csv("%s/odflows.txt" %(module3_output_path), sep="\t", header=None, index=False)
+    #net_flows.to_csv("%s/odflows.txt" %(path_trafassign), sep="\t", header=None, index=False)
     #end = time.time()
     return net_flows
     #return total_flow
