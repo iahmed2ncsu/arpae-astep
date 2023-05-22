@@ -31,7 +31,12 @@ net_zones = pd.read_csv("%s/net_zones.csv" %static_input_path)
 #############
 ### Functions
 #############
+#In order to save a file with the same name we can use the .name attribute of our uploadedFile class . Putting all of them together
 
+def save_file(file, directory):
+     with open(directory,"wb") as f:
+         f.write(file)
+     return st.success("Saved odflows to tempDir")
 def demand_rearr(catg, a, ton_year, faf_rail_red,sunbelt_metro,nonsunbelt):  # sctg= commodity code, a = % increase in demand, year='tons_year'
     """Analyze population shift scenario and returns the total flow data.
     
@@ -594,10 +599,12 @@ def create_total_flow(years, freight_demand_scenario, econ_scn, fossilfuel_reduc
                 total_flow = total_flow + flow
     
     net_flows = generate_net_flows(total_flow)
-    with tempfile.NamedTemporaryFile(mode="w+",delete=False,dir= './Data/Output/Module-3',suffix='.txt'):
-        net_flows.to_csv("odflows.txt", sep="\t", header=None, index=False)
-    #net_flows.to_csv("%s/odflows.txt" %(path_trafassign), sep="\t", header=None, index=False)
-    #end = time.time()
+    #save_file(net_flows, "%s/odflows.txt" %(module3_output_path))
+    # with tempfile.NamedTemporaryFile(mode="w+",delete=False,dir= './Data/Output/Module-3',suffix='.txt'):
+    #     net_flows.to_csv("odflows.txt", sep="\t", header=None, index=False)
+    net_flows.to_csv("%s/odflows.txt" %(path_trafassign), sep="\t", header=None, index=False)
+    net_flows.to_csv("%s/odflows.txt" %(module3_output_path), sep="\t", header=None, index=False)
+    end = time.time()
     return net_flows
     #return total_flow
 
