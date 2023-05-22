@@ -44,7 +44,7 @@ import module9_prepare_outputs
 from module9_prepare_outputs import *
 
 ### Set Page Config
-st.set_page_config(page_title=Main, page_icon=None, 
+st.set_page_config(page_title="Main", page_icon=None, 
                    layout="wide", 
                    initial_sidebar_state="auto", menu_items=None)
 #st.write(os.getcwd())
