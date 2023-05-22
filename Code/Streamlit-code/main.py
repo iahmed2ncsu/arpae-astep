@@ -79,7 +79,7 @@ tolerance = 1e-05
 ####################
 
 ### Define Tab Names and Numbers
-tab1, tab2,tab3, tab4 = st.tabs(["Inputs 1-3", "Inputs 4-7","Run Economic Assessment","Results"])
+tab1, tab2,tab3, tab4 = st.tabs(["Inputs 1-3", "Inputs 4-9","Run Economic Assessment","Results"])
 
 ###################
 ### Module-1 Inputs
