@@ -151,18 +151,18 @@ with tab1:
     net_zones = pd.read_csv("%s/net_zones.csv" %(static_input_path))
     st.markdown('## 3. Inputs on Freight Demands')
 
-    prcnt_default = {2025: 0.018, 2030: 0.0357, 2035 : 0.0529, 2040 : 0.0695, 2045 : 0.0851, 2050 : 0.1}
+    #prcnt_default = {2025: 0.018, 2030: 0.0357, 2035 : 0.0529, 2040 : 0.0695, 2045 : 0.0851, 2050 : 0.1}
     st.write('Table below shows default proportions for coal and petrolium reductions. Click cell(s)\
              and enter value(s) if you need to change')
     #st.experimental_data_editor(pd.DataFrame(prcnt_default, index= ["Proportion"]))
         
-    ff_red = pd.read_csv("%s/coal_petrolium_red.csv" %(static_input_path), header=0,index_col = 0)
+    #ff_red = pd.read_csv("%s/coal_petrolium_red.csv" %(static_input_path), header=0,index_col = 0)
     
-#    ff_red = {'Year': list(range(2025, 2055, 5)), 'Coal Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)],
-#           'Petrolium Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)]}
+    ff_red = {'Year': list(range(2025, 2055, 5)), 'Coal Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)],
+           'Petrolium Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)]}
     st.write("Table below shows default proportions for coal and petrolium reductions. Click cell(s) and enter value(s) if\
              you need to change")
-    #edited_df = st.experimental_data_editor(pd.DataFrame(data=ff_red), key = 302)
+    edited_df = st.experimental_data_editor(pd.DataFrame(data=ff_red), key = 302)
     
 ###################
 ### Module-4 Inputs
@@ -286,7 +286,7 @@ with tab2:
 with tab3:
     st.markdown('## Press the Run button to run the Economic Assessment Tool')
 
-    if st.button("▶️Run"):
+    if st.button("▶️ Run"):
         config_input ={"energy_system_scenario": energy_system_scenario_options.get(st.session_state.energy_system_scenario), 
                          "freight_demand_scenario": st.session_state.freight_demand_scenario, 
                          "year": "2025", 
