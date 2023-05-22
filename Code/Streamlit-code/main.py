@@ -328,7 +328,7 @@ with tab3:
             # st.write("Running Module 4: Traffic Assignment")
             # module4_run_traffic_assignment_cpp.run_traffic_assignment(year)
             # end = time.time()
-            # st.write(f"Module 4 Runtime = {int(end-start)}")
+            # st.write(f"Module 4 Runtime = {int(end-start)} seconds")
             
             # ############
             # ### Module 5
