@@ -151,18 +151,17 @@ with tab1:
     net_zones = pd.read_csv("%s/net_zones.csv" %(static_input_path))
     st.markdown('## 3. Inputs on Freight Demands')
 
-    #prcnt_default = {2025: 0.018, 2030: 0.0357, 2035 : 0.0529, 2040 : 0.0695, 2045 : 0.0851, 2050 : 0.1}
-    st.write('Table below shows default proportions for coal and petrolium reductions. Click cell(s)\
-             and enter value(s) if you need to change')
-    #st.experimental_data_editor(pd.DataFrame(prcnt_default, index= ["Proportion"]))
+    prcnt_default = {2025: 0.018, 2030: 0.0357, 2035 : 0.0529, 2040 : 0.0695, 2045 : 0.0851, 2050 : 0.1}
+    st.write('Table below shows default proportions of change for the selected economic activity')
+    st.experimental_data_editor(pd.DataFrame(prcnt_default, index= ["Proportion"]))
         
-    #ff_red = pd.read_csv("%s/coal_petrolium_red.csv" %(static_input_path), header=0,index_col = 0)
+    ff_red = pd.read_csv("%s/coal_petrolium_red.csv" %(static_input_path), header=0,index_col = 0)
     
-    ff_red = {'Year': list(range(2025, 2055, 5)), 'Coal Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)],
+    ff_red2 = {'Year': list(range(2025, 2055, 5)), 'Coal Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)],
            'Petrolium Reduction Proportion': [x / 100.0 for x in range(25, 55, 5)]}
     st.write("Table below shows default proportions for coal and petrolium reductions. Click cell(s) and enter value(s) if\
              you need to change")
-    edited_df = st.experimental_data_editor(pd.DataFrame(data=ff_red), key = 302)
+    edited_df = st.experimental_data_editor(pd.DataFrame(data=ff_red2), key = 302)
     
 ###################
 ### Module-4 Inputs
