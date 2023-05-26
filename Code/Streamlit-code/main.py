@@ -332,46 +332,46 @@ with tab3:
             # ############
             # ### Module 5
             # ############
-            # start = time.time()
-            # st.write("Running Module 4: Traffic Assignment")
-            # st.write("Running Module 5: Energy Intensity Matrix")
-            # #module5_energyintensity_option = input("Enter Option \n\"default\": Ecnonomic Assessment Scenario \n\"force--run\": Create the default look-up table again \n\"custom\": Enter your own AlignmentData and TrainData \n")
-            # module5_energyintensity_option="default"
-            # module5_single_train_simulator.create_energy_intensity_matrix_sts(option=module5_energyintensity_option)
-            # end = time.time()
-            # st.write(f"Module 5 Runtime = {int(end-start)}")
+            start = time.time()
+            st.write("Running Module 4: Traffic Assignment")
+            st.write("Running Module 5: Energy Intensity Matrix")
+            #module5_energyintensity_option = input("Enter Option \n\"default\": Ecnonomic Assessment Scenario \n\"force--run\": Create the default look-up table again \n\"custom\": Enter your own AlignmentData and TrainData \n")
+            module5_energyintensity_option="default"
+            module5_single_train_simulator.create_energy_intensity_matrix_sts(option=module5_energyintensity_option)
+            end = time.time()
+            st.write(f"Module 5 Runtime = {int(end-start)}")
             
             # ############
             # ### Module 6
             # ############
-            # start = time.time()
-            # st.write("Running Module 6: Calculate Energy Use")
-            # module6_calculate_energy_use.calculate_energy_use(str(year))  
-            # end = time.time()
-            # st.write(f"Module 6 Runtime = {int(end-start)}")
+            start = time.time()
+            st.write("Running Module 6: Calculate Energy Use")
+            module6_calculate_energy_use.calculate_energy_use(str(year))  
+            end = time.time()
+            st.write(f"Module 6 Runtime = {int(end-start)}")
             
             # ############
             # ### Module 7
             # ############
-            # start = time.time()
-            # st.write("Running Module 7")
-            # energy_prices(energy_system_scenario_options.get(st.session_state.energy_system_scenario), renewable_prices, h2_sub,oil_prices)
-            # end = time.time()
-            # st.write(f"Module 7 Runtime = {int(end-start)}")
+            start = time.time()
+            st.write("Running Module 7")
+            energy_prices(energy_system_scenario_options.get(st.session_state.energy_system_scenario), renewable_prices, h2_sub,oil_prices)
+            end = time.time()
+            st.write(f"Module 7 Runtime = {int(end-start)}")
             
             # ############
             # ### Module 9
             # ############
-            # start = time.time()
-            # st.write("Preparing Input Files for Module 9")
-            # module9_prepare_inputs.prepare_inputs_for_module9(str(year), save_mode="overwrite", print_summary=True)
+            start = time.time()
+            st.write("Preparing Input Files for Module 9")
+            module9_prepare_inputs.prepare_inputs_for_module9(str(year), save_mode="overwrite", print_summary=True)
                 
-            # st.write("Preparing Output Files for Module 9")
-            # module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate, 
-            #                                                     st.session_state.tech_lifetime,st.session_state.contingency_factor)
-            # end = time.time()
-            # st.write(f"Module 9 Runtime = {int(end-start)}")
-            # st.write("All Modules Finished")
+            st.write("Preparing Output Files for Module 9")
+            module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate, 
+                                                                st.session_state.tech_lifetime,st.session_state.contingency_factor)
+            end = time.time()
+            st.write(f"Module 9 Runtime = {int(end-start)}")
+            st.write("All Modules Finished")
             
         #     ##########################################################################################################             
         #     ########################################################################################################## 
