@@ -149,7 +149,7 @@ def run_traffic_assignment(year):
     lkflows = lkflows.drop(columns=["ST_MILES", "TEMOA"])
     #lkflows.to_csv("%s/lkflows.csv" %module4_output_path , index=False)
 
-    grade_per_temoa.to_csv("%s/grade_bins_per_temoa.csv" %module4_output_path , index=False)
+    #grade_per_temoa.to_csv("%s/grade_bins_per_temoa.csv" %module4_output_path , index=False)
     #curvature_per_temoa.to_csv("%s/curvature_bins_per_temoa.csv" %module4_output_path , index=False)
     
     end = time.time()
