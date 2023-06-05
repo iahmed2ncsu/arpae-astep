@@ -14,6 +14,7 @@ import pandas as pd
 import time
 import streamlit as st
 import sys
+import logging
 
 ###################
 ### Paths and Files
@@ -74,7 +75,12 @@ def run_traffic_assignment(year):
 #     for file in files_to_be_removed:
 #         if os.path.exists(file):
 #             os.remove(file)
-    subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
+#    subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
+     logger = logging.getLogger(__name__)
+     try:
+        subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
+     except CalledProcessError as exc:
+        st.write(exc.output)
     os.chdir(working_dir)
     ### Get TrafAssign output files and convert to .csv, delimiter ","
     ### Only carried out for lkflows, remaining files not required
