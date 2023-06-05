@@ -366,8 +366,7 @@ with tab3:
             #module9_prepare_inputs.prepare_inputs_for_module9(str(year), save_mode="overwrite", print_summary=True)
                 
             #st.write("Preparing Output Files for Module 9")
-            #module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate, 
-                                                                st.session_state.tech_lifetime,st.session_state.contingency_factor)
+            #module9_prepare_outputs.module9_economic_assessment(st.session_state.discount_rate,st.session_state.tech_lifetime,st.session_state.contingency_factor)
             #end = time.time()
             #st.write(f"Module 9 Runtime = {int(end-start)}")
             st.write("All Modules Finished")
