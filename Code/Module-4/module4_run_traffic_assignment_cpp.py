@@ -30,7 +30,7 @@ file_trafassign = "TrafAssign.exe"
 # Links data path
 static_input_path = "./Data/Static"
 
-file_links = "links.csv"
+file_links = "links.txt"
 path_links = "%s/%s" %(static_input_path, file_links)
 
 #file_temoa_state = "temoa_state_mapping.csv"
