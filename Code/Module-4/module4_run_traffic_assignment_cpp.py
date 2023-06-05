@@ -76,10 +76,9 @@ def run_traffic_assignment(year):
 #         if os.path.exists(file):
 #             os.remove(file)
 #    subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
-     logger = logging.getLogger(__name__)
      try:
         subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
-     except CalledProcessError as exc:
+     except subprocess.CalledProcessError as exc:
         st.write(exc.output)
     os.chdir(working_dir)
     ### Get TrafAssign output files and convert to .csv, delimiter ","
