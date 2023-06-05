@@ -143,13 +143,13 @@ def run_traffic_assignment(year):
     ################
     
     tm_per_temoa = tm_per_temoa.drop(columns=['MyLkID', 'tnc_AB (k)', 'tnc_BA (k)']).reset_index()
-    tm_per_temoa.to_csv("%s/tm_per_temoa.csv" %module4_output_path, index=False)
+    #tm_per_temoa.to_csv("%s/tm_per_temoa.csv" %module4_output_path, index=False)
 
     lkflows = lkflows.drop(columns=["ST_MILES", "TEMOA"])
-    lkflows.to_csv("%s/lkflows.csv" %module4_output_path , index=False)
+    #lkflows.to_csv("%s/lkflows.csv" %module4_output_path , index=False)
 
     grade_per_temoa.to_csv("%s/grade_bins_per_temoa.csv" %module4_output_path , index=False)
-    curvature_per_temoa.to_csv("%s/curvature_bins_per_temoa.csv" %module4_output_path , index=False)
+    #curvature_per_temoa.to_csv("%s/curvature_bins_per_temoa.csv" %module4_output_path , index=False)
     
     end = time.time()
     print(f"Run time for Module_4 = {round(end-start,ndigits = 2)} seconds")
