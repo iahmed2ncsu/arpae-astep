@@ -13,8 +13,6 @@ import os
 import pandas as pd
 import time
 import streamlit as st
-import sys
-import logging
 
 ###################
 ### Paths and Files
@@ -31,7 +29,7 @@ file_trafassign = "TrafAssign.exe"
 # Links data path
 static_input_path = "./Data/Static"
 
-file_links = "links.txt"
+file_links = "links.csv"
 path_links = "%s/%s" %(static_input_path, file_links)
 
 #file_temoa_state = "temoa_state_mapping.csv"
@@ -67,29 +65,27 @@ def run_traffic_assignment(year):
     
     ### Run TrafAssign.exe C++ code to assign net ton flows by link and direction
     working_dir = os.getcwd()
-    st.write(os.getcwd())
+    #st.write(os.getcwd())
     os.chdir(path_trafassign)
-    st.write(os.getcwd())
+    #st.write(os.getcwd())
 #     files_to_be_removed = ["nodes.txt", "zones.txt", "lkflow.txt", "xtime.txt"]
 #     st.write("Module4: Removing files %s from the TrafAssign folder" %files_to_be_removed)
 #     for file in files_to_be_removed:
 #         if os.path.exists(file):
 #             os.remove(file)
-#    subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
-     try:
-        subprocess.run([f"{sys.executable}", file_trafassign], capture_output=True)
-     except subprocess.CalledProcessError as exc:
-        st.write(exc.output)
+    subprocess.run(file_trafassign, capture_output=True)
     os.chdir(working_dir)
     ### Get TrafAssign output files and convert to .csv, delimiter ","
     ### Only carried out for lkflows, remaining files not required
 
     lkflows = pd.read_csv(path_lkflows, sep="\t", header=None).drop(columns=0)
     lkflows.columns = ["tnc_AB (k)", "tnc_BA (k)"]
+    #We may need to multiply an expansion factor (user specified) with both tnc_AB (k) and tnc_BA(k). This is known as "factorup" in the excel workbook
 
     links = pd.read_csv(path_links)
 
     lkflows = links.loc[:, ["MyLkID", "ST_MILES", "TEMOA"]].merge(lkflows, left_on="MyLkID", right_index=True)
+    
     lkflows["tnc_TOT (k)"] = lkflows["tnc_AB (k)"] + lkflows["tnc_BA (k)"]
     lkflows["TMc_e (M)"] = lkflows["tnc_TOT (k)"] * lkflows["ST_MILES"] / 1000
 
@@ -149,13 +145,13 @@ def run_traffic_assignment(year):
     ################
     
     tm_per_temoa = tm_per_temoa.drop(columns=['MyLkID', 'tnc_AB (k)', 'tnc_BA (k)']).reset_index()
-    #tm_per_temoa.to_csv("%s/tm_per_temoa.csv" %module4_output_path, index=False)
+    tm_per_temoa.to_csv("%s/tm_per_temoa.csv" %module4_output_path, index=False)
 
     lkflows = lkflows.drop(columns=["ST_MILES", "TEMOA"])
-    #lkflows.to_csv("%s/lkflows.csv" %module4_output_path , index=False)
+    lkflows.to_csv("%s/lkflows.csv" %module4_output_path , index=False)
 
-    #grade_per_temoa.to_csv("%s/grade_bins_per_temoa.csv" %module4_output_path , index=False)
-    #curvature_per_temoa.to_csv("%s/curvature_bins_per_temoa.csv" %module4_output_path , index=False)
+    grade_per_temoa.to_csv("%s/grade_bins_per_temoa.csv" %module4_output_path , index=False)
+    curvature_per_temoa.to_csv("%s/curvature_bins_per_temoa.csv" %module4_output_path , index=False)
     
     end = time.time()
     print(f"Run time for Module_4 = {round(end-start,ndigits = 2)} seconds")
