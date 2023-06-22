@@ -33,14 +33,3 @@ def energy_prices(energy_system_scenario_options,
     #output_mod7.to_csv("%s/module7_to_module9.csv" %(module7_output_path))
     output_mod7.to_csv("%s/output_mod7_to_mod9.txt" %(module7_output_path), sep="\t", header=None, index=False)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
