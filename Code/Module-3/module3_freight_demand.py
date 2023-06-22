@@ -89,6 +89,20 @@ def reduceMari(catg,a, ton_year,faf_rail_red):
         pass
     return(existing_flow)
 
+###  main function for baseline scenario
+def baseline(catg,ton_year,faf_rail_red):
+    """This baseline is the economic future projection contained within the FAF. It doesn’t require any adjustments.
+    
+    Keyword arguments:
+    catg -- cat_group in the faf data, which will be looped over
+    ton_year -- concatenation of year and economic scenario to read the appropriate column in the faf data
+    faf_rail_red --proportion of reduction of fossil fuels, i.e., coal and petrolium
+    """
+    cat_flow =  faf_rail_red[faf_rail_red['cat_grp_mod']== catg]
+    existing_flow = cat_flow.pivot_table(values=ton_year, index='dms_orig', columns= 'dms_dest',
+                                         fill_value=0, aggfunc='sum')
+    return(existing_flow)
+
 
 ###  All functions for agricultural shift scenario
 
@@ -482,13 +496,14 @@ def generate_net_flows(data):
 
 
 ### Function to generate total flows
-def create_total_flow(years, freight_demand_scenario, econ_scn, fossilfuel_reduction, freight_demand_fraction_change):
+def create_total_flow(years, freight_demand_scenario, econ_scn, coal_reduce, petro_reduce, freight_demand_fraction_change):
     """Generate total flows for each year for the given freight demand scenario.
     
     Keyword arguments:
     years -- Analysis years
     freight_demand_scenario -- e.g., population or agricultural shift or reduction in maritime or agricultural activities
-    fossilfuel_reduction -- data for coal and petrolium reduction
+    coal_reduce -- coal reduction proportion
+    petro_reduce -- petrolium reduction proportion
     freight_demand_fraction_change -- change (proportion) for the given freight_demand_scenario
     """
     if econ_scn == 'Baseline (business as usual)':
@@ -512,8 +527,8 @@ def create_total_flow(years, freight_demand_scenario, econ_scn, fossilfuel_reduc
     agr_sctg = faf_rail[faf_rail['cat_grp']==1]['sctg2'].unique().tolist() #used in scen 3 & 4
     agr_sctg.sort() #sctg commodity types in category 1 (agricultural) #used in scen 3 & 4
     
-    coal_reduce = fossilfuel_reduction.iloc[0][int((years - 2025)/5)]
-    petro_reduce = fossilfuel_reduction.iloc[1][int((years - 2025)/5)]
+    #coal_reduce = fossilfuel_reduction.iloc[0][int((years - 2025)/5)]
+    #petro_reduce = fossilfuel_reduction.iloc[1][int((years - 2025)/5)]
 
     
     #multiply faf_rail ton_year column by 1-a, where a is the reduction in fossil fuel
@@ -557,6 +572,12 @@ def create_total_flow(years, freight_demand_scenario, econ_scn, fossilfuel_reduc
             OD_flow = demand_rearr(i, freight_demand_fraction_change, ton_year,faf_rail_red,sunbelt_metro,nonsunbelt) #sctg and %change can be inlcuded as tuple if we have different % for different commodity
             total_flow = total_flow + OD_flow
             del (OD_flow)
+            
+    elif freight_demand_scenario == "Baseline":
+        for i in faf_rail_red['cat_grp_mod'].unique().tolist():
+            OD_flow = baseline(i, ton_year,faf_rail_red)
+            total_flow = total_flow + OD_flow
+            del (OD_flow)  
             
     #Run function for maritime activity reduction scenario
     elif freight_demand_scenario == "Maritime Activity Reduction":
