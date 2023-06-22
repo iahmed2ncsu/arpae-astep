@@ -83,11 +83,29 @@ def fix_tech_nomenclature(data):
     return data
 
 
-def calculate_energy_use(year):
+def fix_region_nomenclature(data):
+    template_region = {1: 'CA', 
+                       2: 'CEN', 
+                       3: 'MID_AT', 
+                       4: 'NE', 
+                       5: 'NW', 
+                       6: 'N_CEN', 
+                       7: 'SE', 
+                       8: 'SW', 
+                       9: 'TX'}
+    data["Region"] = data["Region"].replace(template_region)
+    return data
+
+
+def calculate_energy_use(year, simulator_type="sts",factorup = 1.5):
     """
     This function converts traffic (tonne-miles) into energy.
     
-        Input:
+        Input Parameters: 
+            year
+            simulator_type = "sts" or "mts"
+    
+        Required inbuilt parameters to pay attention to:
             tech_fraction -> Energy distribution acquired from the 
                                    config file (user-input)
             P_nc = [0.3, 0.6, 0.1] -> Train distribution for STS. 
@@ -109,25 +127,53 @@ def calculate_energy_use(year):
 
     #################################
     ### Input/Output and Static files
+    #################################
 
     params = pd.read_csv("%s/params.csv" %static_input_path)
     links = pd.read_csv("%s/links.csv" %static_input_path)
     lkflows = pd.read_csv("%s/lkflows.csv" %module4_output_path)
     yards = pd.read_csv("%s/yards.csv" %static_input_path)
+    
+    ####################################
+    ### Data from Single-Train-Simulator
+    ####################################
 
-    energy_intensity_matrix = pd.read_csv("%s/EnergyIntensity_Matrix.csv" %module5_output_path)
+#     energy_intensity_matrix = pd.read_csv("%s/EnergyIntensity_Matrix.csv" %module5_output_path)
+#     energy_intensity_matrix = energy_intensity_matrix[["Reg", "Tech", "trnLen", "eDie", "eBio", "eHyd", "eBat", "eCat"]]
+    sts = pd.read_csv("%s/EnergyIntensity_Matrix_STS.csv" %module5_output_path)
 
+    ###################################
+    ### Data from Multi-Train-Simulator
+    ###################################
+    
+    mts = pd.read_csv("%s/EnergyIntensity_Matrix_MTS.csv" %module5_output_path)
+    mts=fix_region_nomenclature(mts)
+    mts=mts.drop(columns="TonMile")
+
+    mts=pd.melt(mts, id_vars="Region", value_vars =["Bat", "BioDie", "BioHyb", "DieHyb", "Diesel", "HydHyb"]).rename(columns={"Region": "Reg", "variable": "Tech"})
+    for col in ["Diesel", "BioDie", "Hyd", "Bat", "Cat"]:
+        mts[col] = 0
+    mts.loc[mts["Tech"] == "Bat", "Bat"] = mts["value"]
+    mts.loc[mts["Tech"] == "BioDie", "BioDie"] = mts["value"]
+    mts.loc[mts["Tech"] == "BioHyb", "BioDie"] = mts["value"]
+    mts.loc[mts["Tech"] == "DieHyb", "Diesel"] = mts["value"]
+    mts.loc[mts["Tech"] == "Diesel", "Diesel"] = mts["value"]
+    mts.loc[mts["Tech"] == "HydHyb", "Hyd"] = mts["value"]
+    mts=mts.drop(columns=["value"])   
+    
     #################################
     ### Remove yards (charging stations) not to be included
     yards = yards[yards["include"] == True].drop(columns="include").reset_index(drop=True)
 
     #################################
     ### Scalar and Vector Assignments
+    #################################
 
     df_theta = params[params[params.columns[0]]=="theta"]
     theta = df_theta[df_theta.columns[1]]
     theta = float(theta/400)
-    factorup = float(params.iloc[14, 5])
+    #factorup = float(params.iloc[14, 5])
+    factor2 = 1.3 ## ToDo: make it clear to the User what this is
 
     #nLink = len(links)
     lkLon = np.array(links["AvgLon"])
@@ -153,10 +199,8 @@ def calculate_energy_use(year):
     ################################################################
     ### Calculate overall energy intensity per Temoa and energy type
     ################################################################
-    
-    energy_intensity = energy_intensity_matrix.copy()
 
-    P_nc = [0.3, 0.6, 0.1] # Percentage share of tonmiles for train lengths 50, 100, 150
+#    P_nc = [0.3, 0.6, 0.1] # Percentage share of tonmiles for train lengths 50, 100, 150
 
 #     tech_fraction = {"Diesel": 0.05,
 #                      "BioDie": 0.05,
@@ -173,21 +217,14 @@ def calculate_energy_use(year):
     
     ### Sum over the different train lengths in the energy density matrix
     
-    energy_intensity_grouped = pd.DataFrame()
-    for i, group in energy_intensity.groupby(["Reg", "Tech"]):
-        index_cols = group.iloc[0, :2]
-        data_cols = group.iloc[:, 3:]
-        data_cols = data_cols.T * P_nc
-        data_cols = data_cols.sum(axis=1)
-        energy_intensity_grouped = pd.concat([energy_intensity_grouped, pd.concat([index_cols, data_cols])], axis=1)
-
-    energy_intensity_grouped = energy_intensity_grouped.T.reset_index(drop=True).drop(columns=["ebtMin", "eTrn", "eRcv"])
-    energy_intensity_grouped = energy_intensity_grouped.rename(columns={"eDie": "Diesel",
-                                                                        "eBio": "BioDie",
-                                                                        "eHyd": "Hyd",
-                                                                        "eBat": "Bat",
-                                                                        "eCat": "Cat"})
-
+    if simulator_type=="sts":
+        energy_intensity_grouped = sts
+    elif simulator_type=="mts":
+        energy_intensity_grouped = mts
+    else:
+        print("Simulator Type not understood")
+        exit()
+    
 
     #############################################################################
     ### The effect of "Diesel", "BioDie", "DieHyb", "BioHyb", "HydHyb", "Bat" on
@@ -262,7 +299,7 @@ def calculate_energy_use(year):
     tm_energy_per_yard = tm_energy_per_yard.merge(links.loc[:, ["State", "TEMOA"]].drop_duplicates(), on="State").rename(columns={"TEMOA": "Region"})
     tm_energy_per_yard["SimTM (M)"] = yTM_y
     tm_energy_per_yard["RTM (M)"] = tm_energy_per_yard["SimTM (M)"] * factorup
-    tm_energy_per_yard["GTM (M)"] = tm_energy_per_yard["RTM (M)"] * 1.3
+    tm_energy_per_yard["GTM (M)"] = tm_energy_per_yard["RTM (M)"] * factor2
     for energy in energy_sources:
         tm_energy_per_yard["%s (%s)" %(energy, energy_sources[energy]["unit_after"])] = \
         tm_energy_per_yard.apply(lambda x: x["GTM (M)"] * EI_region[EI_region["Region"]==x["Region"]][energy].item()/energy_sources[energy]["denominator"], axis=1)
