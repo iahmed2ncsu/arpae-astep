@@ -1,14 +1,2 @@
-Friction	Gravity(ft/sec2)	Gravity(m/hr2)	MaxDecel(%g)	MaxDecel(ft/sec2)	EffGrd1DoC	1hp(ft-lbs/min)	1hp(lbs-ft/sec)	1hp(kip-ft/sec)	1kw(kip-ft/sec)	dDistforvMax(ft)	dt(s)	MaxNotch	dtBwnNotches(sec)	Rchg%
-0.25	32.2	79036.36364	0.01054367	0.339506173	0.0004	33000	550	0.55	1.36	40	1	8	0	0.3
-														
-														
-														
-														
-														
-														
-														
-														
-														
-														
-														
-														
+dt(s)	dDistforvMax(ft)	MaxNotch	dtBwnNotches(sec)	Friction	Gravity(ft/sec2)	MaxDecel(ft/sec2)	EffGrd1DoC	1hp(kip-ft/sec)	1kw(kip-ft/sec)	min Bat (%)	RchgFlag	aMax (ft/sec2)	CatFlag
+2	40	8	0	0.25	32.2	0.339506173	0.0004	0.55	0.73756	0.3	0	0.293	0
