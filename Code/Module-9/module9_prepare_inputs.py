@@ -28,6 +28,7 @@ import json
 #import numpy as np
 import pandas as pd
 #from matplotlib import pyplot as plt
+import sklearn
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
@@ -191,7 +192,7 @@ def update_module8_templates(year, mod8_data, mod9_data, user_input,
     return mod9_data
 
 
-def prepare_inputs_for_module9(year, save_mode="append", print_summary=False):
+def prepare_inputs_for_module9(year, save_mode="append", renewable_prices = "Moderate", oil_prices = "Low", h2_sub = "No"):
     """    
     The function prepares the five inputs files needed for Module 9.
     
@@ -236,14 +237,18 @@ def prepare_inputs_for_module9(year, save_mode="append", print_summary=False):
     df_module7 = df_module7.iloc[:, 1:]
     
     df_module7["freight_demand_scenario"]=config["freight_demand_scenario"]
-    df_module7 = df_module7[(df_module7["renewables_prices"] == "Moderate") & (df_module7["hydrogen_subsidies"] == "No") ]
-    if "reduction" in config["energy_system_scenario"]:
-        df_module7 = df_module7[(df_module7["oil_prices"] == "Low")]
-    else:
-        df_module7 = df_module7[(df_module7["oil_prices"] == "Mid")]
+    df_module7 = df_module7.loc[
+                            (df_module7['renewables_prices'] == renewable_prices) &
+                            (df_module7['hydrogen_subsidies'] == h2_sub) &
+                            (df_module7['oil_prices'] == oil_prices) 
+                            ]
+    # if config["energy_system_scenario"] == "Reference/business as usual":
+    #     df_module7 = df_module7[(df_module7["oil_prices"] == "Mid")]
+    # else:
+    #     df_module7 = df_module7[(df_module7["oil_prices"] == "Low")]
     
 #    df_module7 = df_module7[df_module7["freight_demand_scenario"]=="Agricultural Reduction"]
-    
+        
     ### Fixing Inconsistent Nomenclature
 #     energy_price_module7['technology'] = energy_price_module7['technology'].replace({"electricity": "battery"})
 #     energy_price_module7['energy_system_scenario'] = energy_price_module7['energy_system_scenario'].replace({"business_as_usual": "Reference/business as usual"})
@@ -453,18 +458,18 @@ def prepare_inputs_for_module9(year, save_mode="append", print_summary=False):
     # overwrite: Save output and overwrite existing files
 
     # Updated files:
-    if print_summary:
-        print("Updated files for:")
-        print('energy_system_scenario: ' + config['energy_system_scenario'])
-        print('freight_demand_scenario: ' + config['freight_demand_scenario'])
-        print('year: ' + year + '\n')
-        print("traffic_flow_updated: " + str(traffic_flow_updated.shape))
-        print("train_updated: " + str(train_updated.shape))
-        print("refueling_updated: " + str(refueling_updated.shape))
-        print("energy_updated: " + str(energy_updated.shape))
-        print("energy_price_updated: " + str(energy_price_updated.shape) + '\n')
+    # if print_summary:
+    #     print("Updated files for:")
+    #     print('energy_system_scenario: ' + config['energy_system_scenario'])
+    #     print('freight_demand_scenario: ' + config['freight_demand_scenario'])
+    #     print('year: ' + year + '\n')
+    #     print("traffic_flow_updated: " + str(traffic_flow_updated.shape))
+    #     print("train_updated: " + str(train_updated.shape))
+    #     print("refueling_updated: " + str(refueling_updated.shape))
+    #     print("energy_updated: " + str(energy_updated.shape))
+    #     print("energy_price_updated: " + str(energy_price_updated.shape) + '\n')
 
-        print("File save mode: " + save_mode)
+    #     print("File save mode: " + save_mode)
 
 
     if save_mode == "debug":
