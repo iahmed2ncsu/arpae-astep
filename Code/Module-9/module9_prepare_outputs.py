@@ -25,11 +25,12 @@ import time
 from functools import reduce
 import numpy as np
 import pandas as pd
-import streamlit as st
 import plotly.express as px
 from PIL import Image
 import matplotlib.pyplot as plt
 import base64
+#import streamlit as st
+
 
 #################################
 ### Input/Output and Static files in repository
@@ -112,9 +113,13 @@ def module9_economic_assessment(discount_rate,tech_lifetime,c):
     levelized_cost = df_final.drop(df_final.columns[
                                        [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
                                         26, 27, 28, 29, 35, 36, 37]], axis=1)
+    levelized_cost = levelized_cost.fillna(0)
+    levelized_cost.replace('inf', 0, inplace=True)
     carbon_intensity = df_final.drop(df_final.columns[5:35],
                                      axis=1)  # drop unnecessary columns for the carbon intensity output file
-    
+    carbon_intensity = carbon_intensity.fillna(0)
+    carbon_intensity.replace('inf', 0, inplace=True)
+
     levelized_cost.to_csv("%s/levelized_cost.csv" %module9_output_path)
     carbon_intensity.to_csv("%s/carbon_intensity.csv" %module9_output_path)
     
