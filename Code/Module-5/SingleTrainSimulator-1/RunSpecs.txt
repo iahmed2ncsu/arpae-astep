@@ -1,0 +1,2 @@
+Region (0-9)	Tech (1-6)	Detail (Y/N)
+0	1	0
