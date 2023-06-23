@@ -1,0 +1,2 @@
+Reg, Tech, trnLen, Hours, Miles, netTon, eTrk, eBus, ebtCur, eDie, eBio, eHyd, eBat, eCat, eRcv
+0,            3,            90, 38.772778, 694.9397, 8526.6, 32.446117, 85.09584, -41.506355, 94.01885, 0, 0, 0, 42.353424,  5.279711 
