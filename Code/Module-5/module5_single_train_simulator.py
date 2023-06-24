@@ -181,12 +181,12 @@ def create_energy_intensity_matrix_sts(option, uploaded_alignment_data, uploaded
         
         #uploaded_alignment_data = st.file_uploader("Enter Alignment Data \n Please copy and paste the following as the header and provide columns that adhere to it: \nDist(mi)        SpdLim(mph)     Grade(%)        Curve(Doc)      Catenary(Y/N)")
         df_alignment = pd.read_csv(uploaded_alignment_data)
-        df_alignment.to_csv("%s/AlignmentData.txt" %(path_sts))
+        df_alignment.to_csv("%s/AlignmentData.txt" %(path_sts), index=False)
         
         #uploaded_train_data = st.file_uploader("Enter Train Data \n Please copy and paste the following as the header and provide columns that adhere to it: \nUnit No \"Type (1,17)\"   Tare(ton)    Net(ton)    Gross(ton)    Len(ft)    Axles(n)     aRes     bRes*1000     cRes*1000    eMax(MWh)     eInit(MWh)     teMax (kips)     ptMax (kw)    catMax (kw)    batMax (kw)     auxMax (kw)     rbMax (kw)     dbMax (kw)")
         st.write(uploaded_train_data)
         df_train = pd.read_csv(uploaded_train_data)
-        df_train.to_csv("%s/TrainData.txt" %(path_sts))
+        df_train.to_csv("%s/TrainData.txt" %(path_sts), index=False)
         
         df_energyint = run_sts()
         
@@ -197,3 +197,4 @@ def create_energy_intensity_matrix_sts(option, uploaded_alignment_data, uploaded
         df_result = df_energyint
 
         df_result.to_csv("%s/EnergyIntensity_Matrix_Custom.csv " %(module5_output_path), index=False)
+        
