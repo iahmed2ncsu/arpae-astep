@@ -68,17 +68,17 @@ def run_sts(details=False):
     
     # Change the path back to workdir
     df_output = pd.read_csv("%s/EnergyInt.txt" %path_sts)
-    line = df_output.iloc[0][0]
-    column_values = list(line.split())
-    column_names = df_output.keys()[0]
-    column_names = list(column_names.split())
-    column_names.pop(0) ## George has a new version; and it has an extraneous column name called "blank"
+    # line = df_output.iloc[0][0]
+    # column_values = list(line.split())
+    # column_names = df_output.keys()[0]
+    # column_names = list(column_names.split())
+    # column_names.pop(0) ## George has a new version; and it has an extraneous column name called "blank"
 
 #     column_names = ["Reg", "Tech", "TrnLen", "TotWrk", "BatAtEnd", "Diesel", "Biodiesel", "Catenary", "Hydrogen", "Battery",\
 #                          "Recovered"]
-    df_energyint = pd.DataFrame(np.array([column_values]), columns=column_names)
+    #df_output = pd.DataFrame(np.array([column_values]), columns=column_names)
 
-    return(df_energyint)
+    return(df_output)
 
 #######################################################
 ### Loop through alignment data (9) and Train Data (18)
@@ -151,12 +151,13 @@ def create_energy_intensity_matrix_sts(option, uploaded_alignment_data, uploaded
                     (ret, out, err)= run_cmd(["copy", "%s\\%s" %(module5_input_winpath, traindata_file), "%s\\TrainData.txt" %(winpath_sts)])
                     df_energyint = run_sts()
                     df_energyint["Reg"]=region_dict[region]
-                    df_energyint["Tech"]=tech_dict[tech]
-                    df_energyint["trnLen"] = train_length_dict[train_length]
+                    df_energyint[" Tech"]=tech_dict[tech]
+                    df_energyint[" trnLen"] = train_length_dict[train_length]
 
                     df_result = pd.concat([df_result, df_energyint])
 
-        df_result = df_result[["Reg", "Tech", "trnLen", "eDie", "eBio", "eHyd", "eBat", "eCat"]]
+        df_result = df_result[["Reg", " Tech", " trnLen", " eDie", " eBio", " eHyd", " eBat", " eCat"]]
+        df_result.columns = ["Reg", "Tech", "trnLen", "eDie", "eBio", "eHyd", "eBat", "eCat"]
         df_result.to_csv("%s/EnergyIntensity_Matrix_STS_wTrnLn.csv" %(module5_output_path), index=False)
         
         ### Combine the Trainlengths
@@ -190,14 +191,9 @@ def create_energy_intensity_matrix_sts(option, uploaded_alignment_data, uploaded
         df_energyint = run_sts()
         
         df_energyint["Reg"]= region
-        df_energyint["Tech"]= technology
-        df_energyint["TrnLen"] = car_number
+        df_energyint[" Tech"]= technology
+        df_energyint[" TrnLen"] = car_number
 
         df_result = df_energyint
 
         df_result.to_csv("%s/EnergyIntensity_Matrix_Custom.csv " %(module5_output_path), index=False)
-        
-    
-
-
-
