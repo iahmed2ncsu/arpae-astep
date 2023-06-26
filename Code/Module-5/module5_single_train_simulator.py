@@ -6,7 +6,7 @@
 ##########
 
 import os
-import numpy as np
+from sys import platform
 import pandas as pd
 import subprocess
 import streamlit as st
@@ -17,13 +17,24 @@ import streamlit as st
 
 # SingleTrainSimulator
 path_sts = "./Code/Module-5/SingleTrainSimulator-1/"
-file_sts = "SingleTrainSimulator-1.exe"
+
+# linux needs a different executable and some other background files of similar name
+# It might be best to place the windows and linux executables in 2 subdirectories of 
+# ./Code/Module-5/SingleTrainSimulator-1/ 
+# This way all of the normal files can be kept in one folder,
+# although they may need to be stripped of DOS newlines.
+if platform == "win32":
+    file_sts = "SingleTrainSimulator-1.exe"
+else:
+    file_sts = "linux/SingleTrainSim"
+
+#file_sts = "SingleTrainSimulator-1.exe"
 
 module5_input_path = "./Data/Input/Module-5"
 module5_output_path = "./Data/Output/Module-5" 
 
-module5_input_winpath = ".\\Data\\Input\\Module-5"
-winpath_sts = ".\\Code\\Module-5\\SingleTrainSimulator-1"
+module5_input_winpath = "./Data/Input/Module-5"
+winpath_sts = "./Code/Module-5/SingleTrainSimulator-1"
 
 #############
 ### Functions
@@ -141,14 +152,14 @@ def create_energy_intensity_matrix_sts(option, uploaded_alignment_data, uploaded
         for region in range (1, 10):
 
             alignmentdata_file = "AlignmentData_%d.txt" %(region)
-            (ret, out, err)= run_cmd(["copy", "%s\\%s" %(module5_input_winpath, alignmentdata_file), "%s\\AlignmentData.txt" %(winpath_sts)])
+            (ret, out, err)= run_cmd(["copy", "%s/%s" %(module5_input_winpath, alignmentdata_file), "%s/AlignmentData.txt" %(winpath_sts)])
 
             for tech in range(1, 7):
                 for train_length in range(1, 4):
                     #st.write(region, tech, train_length)
                     traindata_file = "TrainData_%d%d.txt" %(tech, train_length)
 
-                    (ret, out, err)= run_cmd(["copy", "%s\\%s" %(module5_input_winpath, traindata_file), "%s\\TrainData.txt" %(winpath_sts)])
+                    (ret, out, err)= run_cmd(["copy", "%s/%s" %(module5_input_winpath, traindata_file), "%s/TrainData.txt" %(winpath_sts)])
                     df_energyint = run_sts()
                     df_energyint["Reg"]=region_dict[region]
                     df_energyint[" Tech"]=tech_dict[tech]
