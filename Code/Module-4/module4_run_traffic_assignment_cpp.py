@@ -1,3 +1,5 @@
+from sys import platform
+from sys import platform
 ### The following code can be invoked to run the Traffic Assignment Module"
 
 __author__ = "Dr Rupal Mittal, Andreas Weiss"
@@ -10,9 +12,9 @@ __status__ = "Development"
 
 import subprocess
 import os
+from sys import platform
 import pandas as pd
 import time
-import streamlit as st
 
 ###################
 ### Paths and Files
@@ -24,7 +26,10 @@ module4_output_path = "./Data/Output/Module-4"
 # TrafAssign
 #path_trafassign = "./Module-4/TrafAssign/out/build/x64-debug"
 path_trafassign = "./Code/Module-4/TrafAssign/"
+
 file_trafassign = "TrafAssign.exe"
+if platform == "linux":
+    file_trafassign = "./TrafAssign/linux/TrafAssign"
 
 # Links data path
 static_input_path = "./Data/Static"
