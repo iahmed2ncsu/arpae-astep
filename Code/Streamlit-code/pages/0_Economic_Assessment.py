@@ -400,7 +400,7 @@ with tab3:
             st.write("Running Module 5: Energy Intensity Matrix")
             #module5_energyintensity_option = input("Enter Option \n\"default\": Ecnonomic Assessment Scenario \n\"force--run\": Create the default look-up table again \n\"custom\": Enter your own AlignmentData and TrainData \n")
             
-            module5_single_train_simulator.create_energy_intensity_matrix_sts("default", None, None, None, None, None)
+            module5_single_train_simulator.create_energy_intensity_matrix_sts("default", None, None, None, None)
             end = time.time()
             st.write(f"Module 5 Runtime = {round(end-start,2)} seconds")
             

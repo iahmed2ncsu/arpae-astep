@@ -6,6 +6,7 @@ Created on Tue Mar  7 11:59:33 2023
 """
 
 import subprocess
+from sys import platform
 import os
 import streamlit as st
 import time
@@ -26,11 +27,13 @@ def convert_df(df):
    return df.to_csv().encode('utf-8')
 # %% Read hard-coded files
 
-path = os.path.abspath('../../Code/Module-5/NeTrainSim')#this is where the NeTrainSim program is installed. Download the file from\
+path = os.path.abspath('./Code/Module-5/NeTrainSim')#this is where the NeTrainSim program is installed. Download the file from\
     #https://github.com/AhmedAredah/NeTrainSim and install at the default directory
 file = r"NeTrainSim.exe"
-in_path = os.path.abspath("../../Data/Static")
-out = os.path.abspath("../../Data/Output/Module-5")
+if platform == "linux":
+    file = r"NeTrainSim"
+in_path = os.path.abspath("./Data/Static")
+out = os.path.abspath("./Data/Output/Module-5")
 
 # %% About page
 page_title = "A-STEP: Achieving Sustainable Train Energy Pathways"

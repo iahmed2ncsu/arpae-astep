@@ -5,16 +5,16 @@ Created on Tue Mar  7 11:59:33 2023
 @author: Ishtiak
 """
 
+##################
+### IMPORT MODULES
+##################
+
 import subprocess
 import os
 import streamlit as st
 import time
 import sys
 import pandas as pd
-
-##################
-### IMPORT MODULES
-##################
 
 sys.path.append("./Code/Module-5")
 import module5_single_train_simulator
@@ -23,9 +23,18 @@ from module5_single_train_simulator import *
 ###################
 ### Paths and Files
 ###################
+
+# SingleTrainSimulator
+path_sts = "./Code/Module-5/SingleTrainSimulator-1/"
 module5_output_path = "./Data/Output/Module-5"
+
+#############
+### Functions
+#############
+
+
 # %% dataframe conversion function
-# this function converts the output data to utf-8 encoded data. It is important to download the outputs
+# this function converts the output data to utf-8 encoded data. It is important for downloading the outputs
 @st.cache_data
 def convert_df(df):
     return df.to_csv().encode('utf-8')
@@ -45,14 +54,19 @@ region_ui_dict = {"CA":"California",
             "NW":"North-West",
             "SE":"South-East",
             "SW":"South-West",
-            "TX":"Texas"}
+            "TX":"Texas",
+            "OA":"Overall",
+            "OTHER":"Other"}
+
 #technology dictionary
 tech_ui_dict = {"Diesel":"Diesel",
              "BioDie": "Biodiesel",
              "DieHyb": "Diesel-hbrid",
              "BioHyb": "Biodiesel-hybrid",
              "HydHyb": "Hydrogen-hybrid",
-             "Bat": "Battery"}
+             "Battery": "Battery",
+             "Mixed": "Mixed",
+             "Other": "Other"}
 
 #define tab names and numbers
 tab1, tab2,tab3 = st.tabs(["About", "Input","Run Single Train Simulator"])
@@ -60,7 +74,7 @@ tab1, tab2,tab3 = st.tabs(["About", "Input","Run Single Train Simulator"])
 
 page_title = "A-STEP: Achieving Sustainable Train Energy Pathways"
 body = "A-STEP: Achieving Sustainable Train Energy Pathways"
-subhead = "Single Train Simulator"\
+subhead = "Single Train Simulator"
 
 with tab1:
     #st.set_page_config(layout='wide')
@@ -84,56 +98,53 @@ with tab2:
           st.session_state.uploaded_alignment_data = None
     if 'uploaded_train_data' not in st.session_state:
           st.session_state.uploaded_train_data = None
-    if 'uploaded_alignment_data' not in st.session_state:
-          st.session_state.uploaded_alignment_data = None
-         
+    if 'region' not in st.session_state:
+         st.session_state.region = None 
+    if 'technology' not in st.session_state:
+         st.session_state.technology = None 
+        
     st.markdown('#### Upload train and alignment data in appropriate formats')
     st.markdown('#####  For more info about the formats, please check the user manual')
+
+    ### Input the alignment data
     uploaded_alignment_data = st.file_uploader("Upload custom alignment data in a csv file")
     if uploaded_alignment_data is not None:
         st.session_state.uploaded_alignment_data = uploaded_alignment_data
+
+    ### Input the train data
     uploaded_train_data = st.file_uploader("Upload custom train data in a csv file")
     if uploaded_train_data is not None:
          st.session_state.uploaded_train_data = uploaded_train_data
-    
+
     ### Choose a region
-    if 'region' not in st.session_state:
-         st.session_state.region = None 
     region = st.selectbox(
-        label='Region', options=('CA','CEN','MID_AT','N_CEN','NE','NW','SE','SW','TX'), format_func=lambda x: region_ui_dict.get(x),
-        key='sts_3' 
-        )
+        label='Region', 
+options=('CA','CEN','MID_AT','N_CEN','NE','NW','SE','SW','TX','OA','OTHER'), 
+format_func=lambda x: region_ui_dict.get(x), 
+key='sts_3')
+
     ### Choose a technology
-    if 'technology' not in st.session_state:
-         st.session_state.technology = None 
     technology = st.selectbox(
-        label='Technology', options=('Bat','BioDie','BioHyb','DieHyb','Diesel','HydHyb'), format_func=lambda x: tech_ui_dict.get(x),
-        key='sts_5' 
-        )
-    ### Choose number of train cars
-    if 'car_number' not in st.session_state:
-         st.session_state.car_number = None 
-    car_number = st.selectbox(
-        label='Number of cars', options=(50,100,150), key='sts_6' 
-        )
+        label='Technology', 
+options=('Bat','BioDie','BioHyb','DieHyb','Diesel','HydHyb','Mixed','Other'), 
+format_func=lambda x: tech_ui_dict.get(x), 
+key='sts_5')
     
     if st.button("Submit Inputs", key = 'sts_7'):
         st.session_state.region = region
         st.session_state.technology = technology
-        st.session_state.car_number = car_number
+
 with tab3:    
-    @st.experimental_memo()
+##  @st.experimental_memo()
     def computation():
-        df_result = module5_single_train_simulator.create_energy_intensity_matrix_sts("custom", st.session_state.uploaded_alignment_data, 
-                                                                          st.session_state.uploaded_train_data,st.session_state.region,
-                                                                          st.session_state.technology, st.session_state.car_number)
+        df_result = module5_single_train_simulator.create_energy_intensity_matrix_sts("single", st.session_state.uploaded_alignment_data, st.session_state.uploaded_train_data, st.session_state.region,
+st.session_state.technology)
         return df_result
         
         
     if 'run_sts' not in st.session_state:
          st.session_state.run_sts = 0
-    if uploaded_train_data  is None or uploaded_alignment_data is None or st.session_state.region is None or\
-        st.session_state.technology is None or st.session_state.car_number is None:
+    if uploaded_train_data  is None or uploaded_alignment_data is None:
         st.warning("Upload all necessary data first.")
     else:
         run_sts = st.button('▶️ Press to run the simulation')
@@ -142,17 +153,20 @@ with tab3:
         if st.session_state.run_sts == 1:
             start = time.time()
             computation()
-            df_result = pd.read_csv("%s/EnergyIntensity_Matrix_Custom.csv " %(module5_output_path))
             end = time.time()
             st.info(
                f"Run time = {round(end-start,ndigits = 2)} seconds"
             )
-            st.download_button(
-                "Download Energy Intensity Matrix",
-                convert_df(df_result),
-                "EnergyIntensity_Matrix_Custom.csv",
-                "text/csv",
-                key='dl_sts'
-            )
+
+            df_result1 = pd.read_csv("%s/EnergyInt.csv" %(path_sts))
+            ei = convert_df(df_result1)
+            df_result2 = pd.read_csv("%s/Results.csv" %(path_sts))
+            dr = convert_df(df_result2)
+
+            st.download_button("Download Energy Intensity Matrix", ei, "Single_Train_Simulator_Energy_Intensity.csv",
+            "text/csv", key ='dle_sts')
+
+            st.download_button("Download Detailed Results", dr, "Single_Train_Simulator_Detail_Results.csv", 
+            "text/csv", key='dld_sts, index=none')
 
    
