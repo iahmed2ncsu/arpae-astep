@@ -1,2 +1,0 @@
-dt(s)	dDistforvMax(ft)	MaxNotch	dtBwnNotches(sec)	Friction	Gravity(ft/sec2)	MaxDecel(ft/sec2)	EffGrd1DoC	1hp(kip-ft/sec)	1kw(kip-ft/sec)	min Bat (%)	RchgFlag	aMax (ft/sec2)	CatFlag
-2	40	8	0	0.25	32.2	0.339506173	0.0004	0.55	0.73756	0.3	0	0.293	0
