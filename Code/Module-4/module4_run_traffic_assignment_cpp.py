@@ -29,7 +29,7 @@ path_trafassign = "./Code/Module-4/TrafAssign/"
 
 file_trafassign = "TrafAssign.exe"
 if platform == "linux":
-    file_trafassign = "./TrafAssign/linux/TrafAssign"
+    file_trafassign = "./linux/TrafAssign"
 
 # Links data path
 static_input_path = "./Data/Static"
