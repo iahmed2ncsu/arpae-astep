@@ -1,91 +1,91 @@
 energy_system_scenario,freight_demand_scenario,year,region,technology,train_energy_consumption,train_energy_consumption_unit,energy_consumption_at_the_well (GJ),upstream_CO2_emission_factor,downstream_CO2_emission_factor,CO2_emission_factor_unit,upstream_CH4_emission_factor,downstream_CH4_emission_factor,CH4_emission_factor_unit
-Reference/business as usual,Agricultural Reduction,2025.0,california,battery,3191013581.162596,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,california,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,california,catenary,4381106373.042044,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,california,diesel,648079612.8719137,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,california,hydrogen,281739376.88244134,kgH2,0.0,13.7,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,central,battery,2759376964.7399845,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,central,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,central,catenary,3367636897.7271667,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,central,diesel,625688349.3172054,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,central,hydrogen,270449508.80192304,kgH2,0.0,13.1,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,middle_atlantic,battery,3803932515.649183,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,middle_atlantic,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,middle_atlantic,catenary,4585359520.637332,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,middle_atlantic,diesel,894428580.1845787,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,middle_atlantic,hydrogen,358095687.1618286,kgH2,0.0,14.3,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,north_central,battery,2776130710.360139,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_central,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_central,catenary,3154561144.35028,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_central,diesel,712366398.2117497,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_central,hydrogen,166338525.46146417,kgH2,0.0,10.8,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,north_east,battery,1074215150.647287,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_east,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_east,catenary,1303052694.2275245,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_east,diesel,271908087.0593549,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_east,hydrogen,76136072.69962421,kgH2,0.0,15.0,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,north_west,battery,930653124.9050606,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_west,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_west,catenary,1155271174.2524304,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,north_west,diesel,226759675.10655293,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,north_west,hydrogen,79510252.45011076,kgH2,0.0,15.4,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,south_east,battery,3155876041.1648374,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,south_east,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,south_east,catenary,3936449450.739904,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,south_east,diesel,746207141.6829004,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,south_east,hydrogen,280276144.0714251,kgH2,0.0,15.1,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,south_west,battery,580026787.3079474,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,south_west,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,south_west,catenary,702801335.2756845,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,south_west,diesel,144301846.74776614,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,south_west,hydrogen,46474626.93361418,kgH2,0.0,10.5,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2025.0,texas,battery,1978600018.1681008,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,texas,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,texas,catenary,2505616369.255116,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2025.0,texas,diesel,460030651.8188621,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2025.0,texas,hydrogen,187178302.9816537,kgH2,0.0,15.4,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,california,battery,4570984257.691674,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,california,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,california,catenary,6298602128.422513,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,california,diesel,557007038.5765908,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,california,hydrogen,302684293.8174604,kgH2,0.0,12.0,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,central,battery,3939349430.016064,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,central,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,central,catenary,4869399320.972846,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,central,diesel,535948166.6505865,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,central,hydrogen,289574910.9203457,kgH2,0.0,15.2,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,middle_atlantic,battery,5448656929.44526,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,middle_atlantic,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,middle_atlantic,catenary,6657317684.569339,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,middle_atlantic,diesel,768694154.4731718,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,middle_atlantic,hydrogen,384695418.3398103,kgH2,0.0,15.1,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,north_central,battery,3972207028.132652,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_central,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_central,catenary,4571970210.020952,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_central,diesel,611570659.0519663,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_central,hydrogen,178503228.63621637,kgH2,0.0,12.8,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,north_east,battery,1542322782.6310704,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_east,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_east,catenary,1890774234.005437,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_east,diesel,234238013.0464053,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_east,hydrogen,81985251.81426314,kgH2,0.0,12.6,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,north_west,battery,1344371313.0423374,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_west,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_west,catenary,1685836287.9557006,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,north_west,diesel,196538878.3489976,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,north_west,hydrogen,86142166.95741567,kgH2,0.0,14.7,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,south_east,battery,4514244308.432347,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,south_east,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,south_east,catenary,5686261288.701509,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,south_east,diesel,640436056.1025579,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,south_east,hydrogen,300685524.00194925,kgH2,0.0,11.3,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,south_west,battery,832144325.6552145,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,south_west,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,south_west,catenary,1019541310.7066492,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,south_west,diesel,124214914.46287552,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,south_west,hydrogen,50006652.196070224,kgH2,0.0,11.9,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
-Reference/business as usual,Agricultural Reduction,2030.0,texas,battery,2835144901.399687,kWh,0.0,0.3,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,texas,biodiesel,0.0,gallon,0.0,2.4,5.05,kgCO2/gallon,0.004,0.00044,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,texas,catenary,3622904624.5274634,kWh,0.0,0.4,0.0,kgCO2/kWh,0.001,0.0,kgCH4/kWh
-Reference/business as usual,Agricultural Reduction,2030.0,texas,diesel,395507999.0950488,gallon,0.0,1.6,10.1,kgCO2/gallon,0.014,0.00088,kgCH4/gallon
-Reference/business as usual,Agricultural Reduction,2030.0,texas,hydrogen,201156476.7303547,kgH2,0.0,13.5,0.0,kgCO2/kgH2,0.031,0.0,kgCH4/kgH2
+Reference/business as usual,Baseline,2025.0,california,battery,6651600967.645669,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,california,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,california,catenary,9132324463.39757,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,california,diesel,1350908377.6822066,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,california,hydrogen,587279829.5055721,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,central,battery,5680888033.277448,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,central,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,central,catenary,6933147734.863611,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,central,diesel,1288140584.4931984,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,central,hydrogen,556789955.7729992,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,middle_atlantic,battery,7841677992.849268,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,middle_atlantic,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,middle_atlantic,catenary,9452563286.640532,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,middle_atlantic,diesel,1843834212.2407084,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,middle_atlantic,hydrogen,738202125.7734954,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_central,battery,5188915732.281236,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_central,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_central,catenary,5896246847.915455,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_central,diesel,1331496819.3086066,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_central,hydrogen,310906323.11743164,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_east,battery,2128620185.6128812,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_east,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_east,catenary,2582075170.1171,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_east,diesel,538801786.9578253,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_east,hydrogen,150868083.6460508,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_west,battery,1802550019.772122,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_west,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_west,catenary,2237604991.874194,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_west,diesel,439203013.3553085,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,north_west,hydrogen,154000672.52839702,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_east,battery,6219701799.178108,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_east,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_east,catenary,7758080929.599427,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_east,diesel,1470648986.5716093,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_east,hydrogen,552377221.0344218,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_west,battery,1138036088.5080502,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_west,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_west,catenary,1378924732.610217,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_west,diesel,283126077.6756642,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,south_west,hydrogen,91185103.5292288,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,texas,battery,3729694315.199775,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,texas,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,texas,catenary,4723129001.653704,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,texas,diesel,867165516.6035109,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2025.0,texas,hydrogen,352834249.5446713,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,california,battery,8868801290.194225,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,california,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,california,catenary,12220792620.09606,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,california,diesel,1080726702.1457653,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,california,hydrogen,587279829.5055721,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,central,battery,7574517377.703265,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,central,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,central,catenary,9362802267.463465,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,central,diesel,1030512467.594559,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,central,hydrogen,556789955.7729992,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,middle_atlantic,battery,10455570657.132357,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,middle_atlantic,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,middle_atlantic,catenary,12774901473.76158,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,middle_atlantic,diesel,1475067369.7925668,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,middle_atlantic,hydrogen,738202125.7734954,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_central,battery,6918554309.708314,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_central,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_central,catenary,7963186202.6256275,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_central,diesel,1065197455.4468852,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_central,hydrogen,310906323.11743164,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_east,battery,2838160247.483842,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_east,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_east,catenary,3479375606.9442616,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_east,diesel,431041429.56626034,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_east,hydrogen,150868083.6460508,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_west,battery,2403400026.36283,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_west,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_west,catenary,3013854088.9770885,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_west,diesel,351362410.68424684,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,north_west,hydrogen,154000672.52839702,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_east,battery,8292935732.237478,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_east,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_east,catenary,10446000748.304024,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_east,diesel,1176519189.2572875,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_east,hydrogen,552377221.0344218,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_west,battery,1517381451.344067,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_west,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_west,catenary,1859092258.4579108,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_west,diesel,226500862.1405314,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,south_west,hydrogen,91185103.5292288,kgH2,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,texas,battery,4972925753.5997,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,texas,biodiesel,0.0,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,texas,catenary,6354678979.989175,kWh,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,texas,diesel,693732413.2828085,gallon,0.0,,,,,,
+Reference/business as usual,Baseline,2030.0,texas,hydrogen,352834249.5446713,kgH2,0.0,,,,,,

@@ -1,91 +1,91 @@
 energy_system_scenario,freight_demand_scenario,year,region,technology,freight_ton_mile_travel
-Reference/business as usual,Agricultural Reduction,2025,california,battery,6855514764.504406
-Reference/business as usual,Agricultural Reduction,2025,california,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,california,catenary,9412288184.092089
-Reference/business as usual,Agricultural Reduction,2025,california,diesel,22551358977.62433
-Reference/business as usual,Agricultural Reduction,2025,california,hydrogen,10283646273.779184
-Reference/business as usual,Agricultural Reduction,2025,central,battery,22709876531.097397
-Reference/business as usual,Agricultural Reduction,2025,central,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,central,catenary,27715900772.607334
-Reference/business as usual,Agricultural Reduction,2025,central,diesel,83405510975.47272
-Reference/business as usual,Agricultural Reduction,2025,central,hydrogen,37816218420.82254
-Reference/business as usual,Agricultural Reduction,2025,middle_atlantic,battery,17874643281.488995
-Reference/business as usual,Agricultural Reduction,2025,middle_atlantic,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,middle_atlantic,catenary,21546561462.798195
-Reference/business as usual,Agricultural Reduction,2025,middle_atlantic,diesel,68074300654.52223
-Reference/business as usual,Agricultural Reduction,2025,middle_atlantic,hydrogen,28588530501.19057
-Reference/business as usual,Agricultural Reduction,2025,north_central,battery,47429727396.45003
-Reference/business as usual,Agricultural Reduction,2025,north_central,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,north_central,catenary,53895147866.63537
-Reference/business as usual,Agricultural Reduction,2025,north_central,diesel,197127441191.62405
-Reference/business as usual,Agricultural Reduction,2025,north_central,hydrogen,48282719945.29057
-Reference/business as usual,Agricultural Reduction,2025,north_east,battery,2739199400.0776644
-Reference/business as usual,Agricultural Reduction,2025,north_east,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,north_east,catenary,3322724647.987755
-Reference/business as usual,Agricultural Reduction,2025,north_east,diesel,11230198678.226513
-Reference/business as usual,Agricultural Reduction,2025,north_east,hydrogen,3298458373.7080674
-Reference/business as usual,Agricultural Reduction,2025,north_west,battery,32456468866.752964
-Reference/business as usual,Agricultural Reduction,2025,north_west,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,north_west,catenary,40290009130.52998
-Reference/business as usual,Agricultural Reduction,2025,north_west,diesel,128089106226.76086
-Reference/business as usual,Agricultural Reduction,2025,north_west,hydrogen,47111260375.95616
-Reference/business as usual,Agricultural Reduction,2025,south_east,battery,23039865960.000614
-Reference/business as usual,Agricultural Reduction,2025,south_east,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,south_east,catenary,28738539321.68062
-Reference/business as usual,Agricultural Reduction,2025,south_east,diesel,88237329063.6927
-Reference/business as usual,Agricultural Reduction,2025,south_east,hydrogen,34764365554.62607
-Reference/business as usual,Agricultural Reduction,2025,south_west,battery,11178586096.903105
-Reference/business as usual,Agricultural Reduction,2025,south_west,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,south_west,catenary,13544762771.838375
-Reference/business as usual,Agricultural Reduction,2025,south_west,diesel,45044695430.9023
-Reference/business as usual,Agricultural Reduction,2025,south_west,hydrogen,15217485600.356232
-Reference/business as usual,Agricultural Reduction,2025,texas,battery,16318319492.441784
-Reference/business as usual,Agricultural Reduction,2025,texas,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2025,texas,catenary,20664837796.19737
-Reference/business as usual,Agricultural Reduction,2025,texas,diesel,61452157266.7393
-Reference/business as usual,Agricultural Reduction,2025,texas,hydrogen,26227753344.621544
-Reference/business as usual,Agricultural Reduction,2030,california,battery,9911842633.40001
-Reference/business as usual,Agricultural Reduction,2030,california,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,california,catenary,13658054718.142817
-Reference/business as usual,Agricultural Reduction,2030,california,diesel,19563127995.54014
-Reference/business as usual,Agricultural Reduction,2030,california,hydrogen,11151228652.917025
-Reference/business as usual,Agricultural Reduction,2030,central,battery,33199026822.196053
-Reference/business as usual,Agricultural Reduction,2030,central,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,central,catenary,41037059935.12273
-Reference/business as usual,Agricultural Reduction,2030,central,diesel,73157116258.2595
-Reference/business as usual,Agricultural Reduction,2030,central,hydrogen,41461970784.42168
-Reference/business as usual,Agricultural Reduction,2030,middle_atlantic,battery,24895127346.121696
-Reference/business as usual,Agricultural Reduction,2030,middle_atlantic,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,middle_atlantic,catenary,30417545770.82825
-Reference/business as usual,Agricultural Reduction,2030,middle_atlantic,diesel,56886787292.05945
-Reference/business as usual,Agricultural Reduction,2030,middle_atlantic,hydrogen,29862768290.990604
-Reference/business as usual,Agricultural Reduction,2030,north_central,battery,68741971949.22089
-Reference/business as usual,Agricultural Reduction,2030,north_central,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,north_central,catenary,79121316110.67635
-Reference/business as usual,Agricultural Reduction,2030,north_central,diesel,171423237408.2406
-Reference/business as usual,Agricultural Reduction,2030,north_central,hydrogen,52483688431.86214
-Reference/business as usual,Agricultural Reduction,2030,north_east,battery,3931253888.61482
-Reference/business as usual,Agricultural Reduction,2030,north_east,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,north_east,catenary,4819427971.650867
-Reference/business as usual,Agricultural Reduction,2030,north_east,diesel,9670437768.592508
-Reference/business as usual,Agricultural Reduction,2030,north_east,hydrogen,3550419871.141809
-Reference/business as usual,Agricultural Reduction,2030,north_west,battery,45074236301.445526
-Reference/business as usual,Agricultural Reduction,2030,north_west,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,north_west,catenary,56522913328.83713
-Reference/business as usual,Agricultural Reduction,2030,north_west,diesel,106730994035.27763
-Reference/business as usual,Agricultural Reduction,2030,north_west,hydrogen,49069665234.43966
-Reference/business as usual,Agricultural Reduction,2030,south_east,battery,33541778107.54576
-Reference/business as usual,Agricultural Reduction,2030,south_east,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,south_east,catenary,42250109071.60821
-Reference/business as usual,Agricultural Reduction,2030,south_east,diesel,77074326319.30467
-Reference/business as usual,Agricultural Reduction,2030,south_east,hydrogen,37957858701.54135
-Reference/business as usual,Agricultural Reduction,2030,south_west,battery,16179072267.362469
-Reference/business as usual,Agricultural Reduction,2030,south_west,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,south_west,catenary,19822562068.78092
-Reference/business as usual,Agricultural Reduction,2030,south_west,diesel,39116649081.75466
-Reference/business as usual,Agricultural Reduction,2030,south_west,hydrogen,16518511182.10196
-Reference/business as usual,Agricultural Reduction,2030,texas,battery,24071508938.942837
-Reference/business as usual,Agricultural Reduction,2030,texas,biodiesel,0.0
-Reference/business as usual,Agricultural Reduction,2030,texas,catenary,30759902610.690525
-Reference/business as usual,Agricultural Reduction,2030,texas,diesel,54389650367.44563
-Reference/business as usual,Agricultural Reduction,2030,texas,hydrogen,29016848182.92101
+Reference/business as usual,Baseline,2025,california,battery,9001402527.038054
+Reference/business as usual,Baseline,2025,california,biodiesel,0.0
+Reference/business as usual,Baseline,2025,california,catenary,12358487663.708172
+Reference/business as usual,Baseline,2025,california,diesel,29610301583.82345
+Reference/business as usual,Baseline,2025,california,hydrogen,13502595025.43033
+Reference/business as usual,Baseline,2025,central,battery,76629050560.72394
+Reference/business as usual,Baseline,2025,central,biodiesel,0.0
+Reference/business as usual,Baseline,2025,central,catenary,93520682894.5937
+Reference/business as usual,Baseline,2025,central,diesel,281431962381.24475
+Reference/business as usual,Baseline,2025,central,hydrogen,127601790763.43756
+Reference/business as usual,Baseline,2025,middle_atlantic,battery,27503885746.28587
+Reference/business as usual,Baseline,2025,middle_atlantic,biodiesel,0.0
+Reference/business as usual,Baseline,2025,middle_atlantic,catenary,33153901611.666832
+Reference/business as usual,Baseline,2025,middle_atlantic,diesel,104746581958.32404
+Reference/business as usual,Baseline,2025,middle_atlantic,hydrogen,43989447183.72328
+Reference/business as usual,Baseline,2025,north_central,battery,84165965635.78563
+Reference/business as usual,Baseline,2025,north_central,biodiesel,0.0
+Reference/business as usual,Baseline,2025,north_central,catenary,95639115219.08376
+Reference/business as usual,Baseline,2025,north_central,diesel,349810600902.7242
+Reference/business as usual,Baseline,2025,north_central,hydrogen,85679635342.40652
+Reference/business as usual,Baseline,2025,north_east,battery,3345652672.264623
+Reference/business as usual,Baseline,2025,north_east,biodiesel,0.0
+Reference/business as usual,Baseline,2025,north_east,catenary,4058369243.73763
+Reference/business as usual,Baseline,2025,north_east,diesel,13716542219.162975
+Reference/business as usual,Baseline,2025,north_east,hydrogen,4028730464.8347726
+Reference/business as usual,Baseline,2025,north_west,battery,52310758069.036
+Reference/business as usual,Baseline,2025,north_west,biodiesel,0.0
+Reference/business as usual,Baseline,2025,north_west,catenary,64936235943.56386
+Reference/business as usual,Baseline,2025,north_west,diesel,206443845589.46228
+Reference/business as usual,Baseline,2025,north_west,hydrogen,75930186797.93777
+Reference/business as usual,Baseline,2025,south_east,battery,37624729938.42884
+Reference/business as usual,Baseline,2025,south_east,biodiesel,0.0
+Reference/business as usual,Baseline,2025,south_east,catenary,46930819071.61939
+Reference/business as usual,Baseline,2025,south_east,diesel,144093966617.40067
+Reference/business as usual,Baseline,2025,south_east,hydrogen,56771157772.55106
+Reference/business as usual,Baseline,2025,south_west,battery,26214351719.539383
+Reference/business as usual,Baseline,2025,south_west,biodiesel,0.0
+Reference/business as usual,Baseline,2025,south_west,catenary,31763156107.646
+Reference/business as usual,Baseline,2025,south_west,diesel,105632096840.25542
+Reference/business as usual,Baseline,2025,south_west,hydrogen,35685776032.5592
+Reference/business as usual,Baseline,2025,texas,battery,40817913207.77513
+Reference/business as usual,Baseline,2025,texas,biodiesel,0.0
+Reference/business as usual,Baseline,2025,texas,catenary,51690099339.4951
+Reference/business as usual,Baseline,2025,texas,diesel,153713672716.48978
+Reference/business as usual,Baseline,2025,texas,hydrogen,65604927036.23997
+Reference/business as usual,Baseline,2030,california,battery,11772181982.980728
+Reference/business as usual,Baseline,2030,california,biodiesel,0.0
+Reference/business as usual,Baseline,2030,california,catenary,16221515173.544724
+Reference/business as usual,Baseline,2030,california,diesel,23234903078.848072
+Reference/business as usual,Baseline,2030,california,hydrogen,13244186564.626469
+Reference/business as usual,Baseline,2030,central,battery,101815204316.13628
+Reference/business as usual,Baseline,2030,central,biodiesel,0.0
+Reference/business as usual,Baseline,2030,central,catenary,125852985516.87096
+Reference/business as usual,Baseline,2030,central,diesel,224359189168.58548
+Reference/business as usual,Baseline,2030,central,hydrogen,127156107598.40717
+Reference/business as usual,Baseline,2030,middle_atlantic,battery,36694382278.53129
+Reference/business as usual,Baseline,2030,middle_atlantic,biodiesel,0.0
+Reference/business as usual,Baseline,2030,middle_atlantic,catenary,44834197350.00372
+Reference/business as usual,Baseline,2030,middle_atlantic,diesel,83848758452.62608
+Reference/business as usual,Baseline,2030,middle_atlantic,hydrogen,44016478418.83889
+Reference/business as usual,Baseline,2030,north_central,battery,113770850507.00768
+Reference/business as usual,Baseline,2030,north_central,biodiesel,0.0
+Reference/business as usual,Baseline,2030,north_central,catenary,130949100991.6756
+Reference/business as usual,Baseline,2030,north_central,diesel,283712657108.62805
+Reference/business as usual,Baseline,2030,north_central,hydrogen,86862708492.68867
+Reference/business as usual,Baseline,2030,north_east,battery,4499833167.911137
+Reference/business as usual,Baseline,2030,north_east,biodiesel,0.0
+Reference/business as usual,Baseline,2030,north_east,catenary,5516464327.068574
+Reference/business as usual,Baseline,2030,north_east,diesel,11069078175.122849
+Reference/business as usual,Baseline,2030,north_east,hydrogen,4063918929.897443
+Reference/business as usual,Baseline,2030,north_west,battery,69979665530.01143
+Reference/business as usual,Baseline,2030,north_west,biodiesel,0.0
+Reference/business as usual,Baseline,2030,north_west,catenary,87754222680.12994
+Reference/business as usual,Baseline,2030,north_west,diesel,165704399611.4216
+Reference/business as usual,Baseline,2030,north_west,hydrogen,76182738578.43697
+Reference/business as usual,Baseline,2030,south_east,battery,50169335472.80776
+Reference/business as usual,Baseline,2030,south_east,biodiesel,0.0
+Reference/business as usual,Baseline,2030,south_east,catenary,63194619229.18686
+Reference/business as usual,Baseline,2030,south_east,diesel,115282133256.49425
+Reference/business as usual,Baseline,2030,south_east,hydrogen,56774585441.5111
+Reference/business as usual,Baseline,2030,south_west,battery,35186896060.38245
+Reference/business as usual,Baseline,2030,south_west,biodiesel,0.0
+Reference/business as usual,Baseline,2030,south_west,catenary,43110903989.94677
+Reference/business as usual,Baseline,2030,south_west,diesel,85072459206.86752
+Reference/business as usual,Baseline,2030,south_west,hydrogen,35925121442.80324
+Reference/business as usual,Baseline,2030,texas,battery,54298687530.431
+Reference/business as usual,Baseline,2030,texas,biodiesel,0.0
+Reference/business as usual,Baseline,2030,texas,catenary,69385859630.19092
+Reference/business as usual,Baseline,2030,texas,diesel,122688055729.38142
+Reference/business as usual,Baseline,2030,texas,hydrogen,65454009409.99663
