@@ -33,7 +33,8 @@ file = r"NeTrainSim.exe"
 if platform == "linux":
     file = r"NeTrainSim"
 in_path = os.path.abspath("./Data/Static")
-out = os.path.abspath("./Data/Output/Module-5")
+inputFiles = os.path.abspath("./Data/Input/Module-5")
+outputFiles = os.path.abspath("./Data/Output/Module-5")
 
 # %% About page
 page_title = "A-STEP: Achieving Sustainable Train Energy Pathways"
@@ -66,11 +67,12 @@ with tab2:
     link = st.file_uploader("Upload your input Link file", type=["DAT"]) 
     node = st.file_uploader("Upload your input Node file", type=["DAT"]) 
     if st.button("Submit All Data"):
-        with open(out+ r"/" + train.name,"wb") as f1:
+        print(train.name)
+        with open(inputFiles+ r"/" + train.name,"wb") as f1:
             f1.write(train.getbuffer()) 
-        with open(out+ r"/" + link.name,"wb") as f2:
+        with open(inputFiles+ r"/" + link.name,"wb") as f2:
             f2.write(link.getbuffer())
-        with open(out+ r"/" + node.name,"wb") as f3:
+        with open(inputFiles+ r"/" + node.name,"wb") as f3:
             f3.write(node.getbuffer())
 
 # %% Simulation run page
@@ -82,12 +84,13 @@ with tab3:
         start = time.time()
         #os.chdir(path)
         subprocess.run([path + "/" + file,
-                        "-n",out+ r"/" + node.name+ r".dat",                        
-                        "-t",out+ r"/" + train.name+ r".dat",
-                        "-l",out+ r"/" + link.name+ r".dat",
+                        "-n",inputFiles+ r"/" + node.name,                        
+                        "-t",inputFiles+ r"/" + train.name,
+                        "-l",inputFiles+ r"/" + link.name,
                         "-e","true",
-                        "-o",out],
-                       capture_output=True)
+                        "-a", "true",
+                        "-o",outputFiles],
+                       capture_output=False)
         end = time.time()
         return start,end
     

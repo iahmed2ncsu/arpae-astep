@@ -9,8 +9,6 @@ Created on Tue Mar  7 11:59:33 2023
 ### IMPORT MODULES
 ##################
 
-import subprocess
-import os
 import streamlit as st
 import time
 import sys

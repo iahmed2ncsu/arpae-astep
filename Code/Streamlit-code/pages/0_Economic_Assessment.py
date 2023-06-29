@@ -36,7 +36,7 @@ st.sidebar.markdown("# Economic Assessment Tool")
 ###################
 
 path_config = "./Config/"
-static_input_path = "./Data/Static/"
+static_input_path = "./Data/Static"
 
 ### Config File
 file_config_output = "%s/user_input.json" %(path_config)
